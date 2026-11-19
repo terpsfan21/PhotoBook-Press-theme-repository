@@ -194,7 +194,7 @@ export function renderArt(manifest, page, c, alt = '') {
 
 /** HTML for one page: art plus live, selectable text. */
 export function pageHTML(p, opts = {}) {
-  const cls = `nub-page nub-style-${p.style} nub-set-${opts.textSetting || 'std'}`;
+  const cls = `nub-page nub-style-${p.style} nub-look-${p.look || 'panel'} nub-set-${opts.textSetting || 'std'}`;
   let h = `<div class="${cls}" data-page-id="${esc(p.id)}">${p.art}<div class="nub-copy">`;
   if (p.title) h += `<p class="nub-title">${esc(p.title)}</p>`;
   if (p.body) h += `<p class="nub-body">${esc(p.body)}</p>`;
@@ -217,7 +217,7 @@ export function resolveBook(input) {
     const text = resolveText(page, c, setting);
     const alt = fillTokens(page.alt || '', c);
     const art = renderArt(manifest, page, c, alt);
-    return { id: page.id, style: page.style || 'panel', folio, title: text.title, body: text.body, alt, art: art.svg, placeholder: art.placeholder };
+    return { id: page.id, style: page.style || 'panel', look: manifest.look || 'panel', folio, title: text.title, body: text.body, alt, art: art.svg, placeholder: art.placeholder };
   };
   return {
     titleId: manifest.id,

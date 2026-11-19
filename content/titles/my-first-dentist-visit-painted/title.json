@@ -1,0 +1,305 @@
+{
+ "schema": "nub-title/1",
+ "id": "dentistp",
+ "code": "dentistp",
+ "handle": "my-first-dentist-visit-painted",
+ "title": "My First Dentist Visit",
+ "short": "Dentist (painted)",
+ "edition": "Painted sample",
+ "storyVersion": "sample-2",
+ "copyStatus": "sample-unreviewed",
+ "status": "prototype",
+ "artStatus": "screen-sample",
+ "look": "band",
+ "fixedCharacter": true,
+ "cardImage": "nub-dentistp-card.jpg",
+ "blurb": "A fully painted sample of the dentist story. The child is part of each picture, so only the name changes.",
+ "interiorPageCount": 24,
+ "variants": [
+  {
+   "id": 51000000301,
+   "binding": "softcover",
+   "sku": "NUB-DENP-SC-85"
+  },
+  {
+   "id": 51000000302,
+   "binding": "hardcover",
+   "sku": "NUB-DENP-HC-85"
+  }
+ ],
+ "video": null,
+ "availability": {
+  "supports": {},
+  "mobility": {
+   "none": true
+  },
+  "comfort": {
+   "none": true
+  }
+ },
+ "cast": {},
+ "cover": {
+  "front": {
+   "id": "cover-front",
+   "style": "cover",
+   "layers": [],
+   "text": {
+    "title": "My First Dentist Visit",
+    "std": "{name}’s story",
+    "easy": "{name}’s story",
+    "noName": {
+     "std": "A little story for a big first",
+     "easy": "A little story for a big first"
+    }
+   },
+   "alt": "A child with glasses sits in a dental chair holding a toy rabbit, between a smiling grown-up and a dentist."
+  },
+  "back": {
+   "id": "cover-back",
+   "style": "back",
+   "layers": [],
+   "text": {
+    "title": "A little story for a big first.",
+    "std": "Follow {name} through a first dentist visit, one small step at a time.",
+    "easy": "Follow {name} through a first dentist visit, one small step at a time.",
+    "noName": {
+     "std": "Follow along through a first dentist visit, one small step at a time.",
+     "easy": "Follow along through a first dentist visit, one small step at a time."
+    }
+   },
+   "alt": "Back cover illustration."
+  }
+ },
+ "pages": [
+  {
+   "id": "p01",
+   "style": "title",
+   "layers": [],
+   "text": {
+    "title": "My First Dentist Visit",
+    "std": "{name}’s story",
+    "easy": "{name}’s story",
+    "noName": {
+     "std": "A little story for a big first",
+     "easy": "A little story for a big first"
+    }
+   },
+   "alt": "A soft green toy rabbit sits on a yellow backpack beside a pair of round glasses."
+  },
+  {
+   "id": "p02",
+   "layers": [],
+   "text": {
+    "std": "I’m {name}. Today is my first visit to the dentist.",
+    "easy": "I’m {name}. Today is my first visit to the dentist.",
+    "noName": {
+     "std": "Today is my first visit to the dentist.",
+     "easy": "Today is my first visit to the dentist."
+    }
+   },
+   "alt": "Illustration: I’m the child. Today is my first visit to the dentist."
+  },
+  {
+   "id": "p03",
+   "layers": [],
+   "text": {
+    "std": "I pack Fern, my soft green rabbit. Mom says Fern can come with us.",
+    "easy": "I pack Fern, my soft green rabbit. Mom says Fern can come with us."
+   },
+   "alt": "Illustration: I pack Fern, my soft green rabbit. Mom says Fern can come with us."
+  },
+  {
+   "id": "p04",
+   "layers": [],
+   "text": {
+    "std": "We walk up to a big glass door. This is the dentist’s office.",
+    "easy": "We walk up to a big glass door. This is the dentist’s office."
+   },
+   "alt": "Illustration: We walk up to a big glass door. This is the dentist’s office."
+  },
+  {
+   "id": "p05",
+   "layers": [],
+   "text": {
+    "std": "I stop to look through the door. Mom waits with me until I’m ready.",
+    "easy": "I stop to look through the door. Mom waits with me until I’m ready."
+   },
+   "alt": "Illustration: I stop to look through the door. Mom waits with me until I’m ready."
+  },
+  {
+   "id": "p06",
+   "layers": [],
+   "text": {
+    "std": "At the desk, Mom tells someone my name.",
+    "easy": "At the desk, Mom tells someone my name."
+   },
+   "alt": "Illustration: At the desk, Mom tells someone my name."
+  },
+  {
+   "id": "p07",
+   "layers": [],
+   "text": {
+    "std": "I can wave, say hello, or stay close to Mom.",
+    "easy": "I can wave, say hello, or stay close to Mom."
+   },
+   "alt": "Illustration: I can wave, say hello, or stay close to Mom."
+  },
+  {
+   "id": "p08",
+   "layers": [],
+   "text": {
+    "std": "We might wait a little. I sit right next to Mom.",
+    "easy": "We might wait a little. I sit right next to Mom."
+   },
+   "alt": "Illustration: We might wait a little. I sit right next to Mom."
+  },
+  {
+   "id": "p09",
+   "layers": [],
+   "text": {
+    "std": "I squeeze Fern’s soft ears while we wait for my name.",
+    "easy": "I squeeze Fern’s soft ears while we wait for my name."
+   },
+   "alt": "Illustration: I squeeze Fern’s soft ears while we wait for my name."
+  },
+  {
+   "id": "p10",
+   "layers": [],
+   "text": {
+    "std": "“Hi, {name},” the dentist says. It’s my turn.",
+    "easy": "“Hi, {name},” the dentist says. It’s my turn.",
+    "noName": {
+     "std": "“Hi,” the dentist says. It’s my turn.",
+     "easy": "“Hi,” the dentist says. It’s my turn."
+    }
+   },
+   "alt": "Illustration: “Hi, the child,” the dentist says. It’s my turn."
+  },
+  {
+   "id": "p11",
+   "layers": [],
+   "text": {
+    "std": "The dentist shows us where to go. Mom comes with me.",
+    "easy": "The dentist shows us where to go. Mom comes with me."
+   },
+   "alt": "Illustration: The dentist shows us where to go. Mom comes with me."
+  },
+  {
+   "id": "p12",
+   "layers": [],
+   "text": {
+    "std": "There’s a chair that can lean back. I can ask how it works.",
+    "easy": "There’s a chair that can lean back. I can ask how it works."
+   },
+   "alt": "Illustration: There’s a chair that can lean back. I can ask how it works."
+  },
+  {
+   "id": "p13",
+   "layers": [],
+   "text": {
+    "std": "There’s a light above the chair so the dentist can see my teeth.",
+    "easy": "There’s a light above the chair so the dentist can see my teeth."
+   },
+   "alt": "Illustration: There’s a light above the chair so the dentist can see my teeth."
+  },
+  {
+   "id": "p14",
+   "layers": [],
+   "text": {
+    "std": "I put on a paper bib. The dentist shows me a little mirror.",
+    "easy": "I put on a paper bib. The dentist shows me a little mirror."
+   },
+   "alt": "Illustration: I put on a paper bib. The dentist shows me a little mirror."
+  },
+  {
+   "id": "p15",
+   "layers": [],
+   "text": {
+    "std": "The mirror helps the dentist see the teeth hiding in the back.",
+    "easy": "The mirror helps the dentist see the teeth hiding in the back."
+   },
+   "alt": "Illustration: The mirror helps the dentist see the teeth hiding in the back."
+  },
+  {
+   "id": "p16",
+   "layers": [],
+   "text": {
+    "std": "A little tube can slurp up water. The dentist shows me how it sounds.",
+    "easy": "A little tube can slurp up water. The dentist shows me how it sounds."
+   },
+   "alt": "Illustration: A little tube can slurp up water. The dentist shows me how it sounds."
+  },
+  {
+   "id": "p17",
+   "layers": [],
+   "text": {
+    "std": "I can try my headphones if the sound bothers me.",
+    "easy": "I can try my headphones if the sound bothers me."
+   },
+   "alt": "Illustration: I can try my headphones if the sound bothers me."
+  },
+  {
+   "id": "p18",
+   "layers": [],
+   "text": {
+    "std": "I raise my hand to ask for a pause. The dentist puts her tool down.",
+    "easy": "I raise my hand to ask for a pause. The dentist puts her tool down."
+   },
+   "alt": "Illustration: I raise my hand to ask for a pause. The dentist puts her tool down."
+  },
+  {
+   "id": "p19",
+   "layers": [],
+   "text": {
+    "std": "I take a moment with Fern. I can tell the dentist when I’m ready.",
+    "easy": "I take a moment with Fern. I can tell the dentist when I’m ready."
+   },
+   "alt": "Illustration: I take a moment with Fern. I can tell the dentist when I’m ready."
+  },
+  {
+   "id": "p20",
+   "layers": [],
+   "text": {
+    "std": "When I’m ready, I open my mouth for the little mirror.",
+    "easy": "When I’m ready, I open my mouth for the little mirror."
+   },
+   "alt": "Illustration: When I’m ready, I open my mouth for the little mirror."
+  },
+  {
+   "id": "p21",
+   "layers": [],
+   "text": {
+    "std": "Visits can go different ways. I can ask, “What’s next?”",
+    "easy": "Visits can go different ways. I can ask, “What’s next?”"
+   },
+   "alt": "Illustration: Visits can go different ways. I can ask, “What’s next?”"
+  },
+  {
+   "id": "p22",
+   "layers": [],
+   "text": {
+    "std": "When the visit is done, I take off my bib and pick up Fern.",
+    "easy": "When the visit is done, I take off my bib and pick up Fern."
+   },
+   "alt": "Illustration: When the visit is done, I take off my bib and pick up Fern."
+  },
+  {
+   "id": "p23",
+   "layers": [],
+   "text": {
+    "std": "Mom and I head home. Some parts were easier after I saw them.",
+    "easy": "Mom and I head home. Some parts were easier after I saw them."
+   },
+   "alt": "Illustration: Mom and I head home. Some parts were easier after I saw them."
+  },
+  {
+   "id": "p24",
+   "layers": [],
+   "text": {
+    "std": "Fern and I did something new today.",
+    "easy": "Fern and I did something new today."
+   },
+   "alt": "Illustration: Fern and I did something new today."
+  }
+ ]
+}

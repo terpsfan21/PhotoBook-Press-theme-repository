@@ -74,6 +74,17 @@ function radios(key, legend, hint = '') {
 function characterForm(t) {
   const c = state.character;
   const av = t.availability;
+  if (t.fixedCharacter) {
+    return `<form id="char" novalidate>
+    <fieldset><legend>About the child</legend>
+      <label class="field" for="name">First name or nickname <span class="muted">(optional)</span></label>
+      <p class="hint" id="name-hint">Shown on the cover and in the story. Up to ${NAME_MAX} characters.</p>
+      <input type="text" id="name" name="name" value="${esc(c.name)}" maxlength="${NAME_MAX + 6}" autocomplete="off" aria-describedby="name-hint name-error">
+      <p class="error" id="name-error" role="alert"></p>
+    </fieldset>
+    <p class="note"><strong>Painted sample.</strong> In this edition the child is painted into every picture, so the look cannot be changed here. Only the name is personalized.</p>
+  </form>`;
+  }
   return `
   <form id="char" novalidate>
     <fieldset><legend>About the child</legend>
@@ -184,7 +195,7 @@ function viewMake(titleId) {
     const book = resolveBook({ titleId: t.id, character: state.character, textSetting: state.textSetting });
     const steps = [['character', '1. Character'], ['preview', '2. Preview the book'], ['order', '3. Cover and order']];
     let panel = '';
-    if (state.step === 'character') panel = `<div class="editor"><div class="stage" id="stage">${stageSVG()}<p class="muted" style="text-align:center;margin:6px 0 0">Placeholder drawing · final art will replace it</p></div><div>${characterForm(t)}<div class="actions"><button class="btn" data-step="preview">Preview the book →</button></div></div></div>`;
+    if (state.step === 'character') panel = `<div class="editor"><div class="stage" id="stage">${t.fixedCharacter ? `<div>${pageHTML(book.cover.front, { placeholderLabel: false })}</div>` : stageSVG()}<p class="muted" style="text-align:center;margin:6px 0 0">${t.fixedCharacter ? 'The cover, with the name you type' : 'A quick sketch of your choices · the book pages show the finished art'}</p></div><div>${characterForm(t)}<div class="actions"><button class="btn" data-step="preview">Preview the book →</button></div></div></div>`;
     else if (state.step === 'preview') panel = `${previewPanel(book)}<div class="actions"><button class="btn ghost" data-step="character">← Change the character</button><button class="btn" data-step="order">Choose the cover →</button></div>`;
     else panel = `${orderPanel(t, book)}`;
     main.innerHTML = `
@@ -229,12 +240,13 @@ function viewMake(titleId) {
     else if (el.name !== 'name') state.character[el.name] = el.value;
     state.seenAll = false;
     keep();
-    $('#stage').firstElementChild.outerHTML = stageSVG();
+    if (!t.fixedCharacter) $('#stage').firstElementChild.outerHTML = stageSVG();
   };
   main.oninput = (e) => {
     if (e.target.id !== 'name') return;
     state.character.name = e.target.value;
     $('#name-error').textContent = validateName(normalizeCharacter(state.character).name) || '';
+    if (t.fixedCharacter) $('#stage').firstElementChild.innerHTML = pageHTML(resolveBook({ titleId: t.id, character: state.character, textSetting: state.textSetting }).cover.front, { placeholderLabel: false });
     state.seenAll = false;
     keep();
   };

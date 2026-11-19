@@ -46,3 +46,26 @@
   position: absolute; top: 1.8cqw; left: 1.8cqw; padding: 0.5cqw 1.3cqw; border-radius: 2cqw;
   font-size: 1.7cqw; font-weight: 700; color: #fff; background: rgba(46, 42, 38, 0.74);
 }
+
+/* "Band" look: fully painted pages with the read-aloud words in a soft dark
+   band across the bottom of the picture. Set per title with "look": "band". */
+.nub-look-band .nub-copy {
+  left: 0; right: 0; bottom: 0; min-height: 0; padding: 11cqw 9cqw 6.5cqw;
+  border-radius: 0; box-shadow: none; color: #fdf6e3;
+  background: linear-gradient(to bottom, rgba(16, 44, 42, 0) 0%, rgba(16, 44, 42, 0.86) 42%, rgba(16, 44, 42, 0.94) 100%);
+}
+.nub-look-band .nub-body { font-size: 3.5cqw; font-weight: 600; }
+.nub-look-band.nub-set-easy .nub-body { font-size: 4.4cqw; }
+.nub-look-band .nub-title, .nub-look-band.nub-style-cover .nub-body { font-family: "Noto Serif", "Iowan Old Style", Palatino, Georgia, serif; }
+.nub-look-band .nub-folio { color: #fdf6e3; opacity: 0.8; }
+.nub-look-band.nub-style-title .nub-copy, .nub-look-band.nub-style-back .nub-copy { top: auto; bottom: 0; padding: 12cqw 9cqw 8cqw; }
+.nub-look-band.nub-style-title .nub-title { font-size: 5cqw; }
+.nub-look-band.nub-style-title .nub-body { font-size: 3.6cqw; font-weight: 500; margin-top: 1cqw; }
+.nub-look-band.nub-style-back .nub-title { font-size: 4.4cqw; margin-bottom: 1.4cqw; }
+.nub-look-band.nub-style-back .nub-body { font-size: 3.3cqw; font-weight: 500; }
+.nub-look-band.nub-style-back .nub-brand { display: none; }
+.nub-look-band.nub-style-cover .nub-copy { top: 9cqw; bottom: auto; padding: 0 6cqw; background: none; }
+.nub-look-band.nub-style-cover .nub-title { font-size: 9.6cqw; line-height: 1.04; }
+.nub-look-band.nub-style-cover .nub-body { font-size: 4.2cqw; font-weight: 500; margin-top: 2.4cqw; }
+.nub-look-band.nub-style-cover .nub-brand { color: #fdf6e3; top: 5.4cqw; font-weight: 600; }
+.nub-look-band.nub-style-cover .nub-copy { top: 11cqw; }

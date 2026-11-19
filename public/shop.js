@@ -130,7 +130,7 @@ function booksGrid() {
   return `<ul class="products">
     ${orderable().map((t) => `<li><a class="product" href="#/books/${t.id}">
       ${slot(`nub-${t.code}-photo-cover`, `${t.title}, printed book`, `<div class="stagebg">${coverMock(t)}</div>`)}
-      <h3>${esc(t.title)}</h3><p class="muted">${esc(t.blurb)}</p><p class="pricefrom">From ${from}</p><span class="btn small">View book</span></a></li>`).join('')}
+      <h3>${esc(t.title)}${t.edition ? ` <span class="tag">${esc(t.edition)}</span>` : ''}</h3><p class="muted">${esc(t.blurb)}</p><p class="pricefrom">From ${from}</p><span class="btn small">View book</span></a></li>`).join('')}
     ${CONCEPTS.map((c) => `<li><div class="product soon"><div class="slot">${c.image ? `<img src="${esc(c.image)}" alt="Illustration for ${esc(c.title)}" loading="lazy">` : ''}</div><h3>${esc(c.title)}</h3><p><span class="tag">${esc(c.note)}</span></p></div></li>`).join('')}
   </ul>`;
 }
@@ -164,10 +164,11 @@ export function viewBook(main, ctx, id) {
     </div>
     <div class="buybox">
       <h1>${esc(t.title)}</h1>
+      ${t.edition ? `<p><span class="tag">${esc(t.edition)}</span></p>` : ''}
       <p class="lead">${esc(t.blurb)}</p>
       <div class="prices">${Object.values(BINDINGS).map((x) => `<div><strong>${x.label}</strong><span>${money(x.priceCents)}</span></div>`).join('')}</div>
       <p><a class="btn big wide" href="#/make/${t.id}">Personalize this book</a></p>
-      <ul class="ticks"><li>Read every page before you order</li><li>24 story pages, 8.5 × 8.5 in</li><li>Name, look, and supports your child uses</li><li>Standard or easy-to-read words</li></ul>
+      <ul class="ticks"><li>Read every page before you order</li><li>24 story pages, 8.5 × 8.5 in</li><li>${t.fixedCharacter ? 'Your child\u2019s name on the cover and in the story' : 'Name, look, and supports your child uses'}</li><li>Standard or easy-to-read words</li></ul>
       <p class="muted">You choose softcover or hardcover after you have seen the whole book. Shipping and delivery time are shown before you pay.</p>
     </div>
   </div>

@@ -1574,6 +1574,141 @@
   "w": 800,
   "h": 800
  },
+ "nub-dentistp-card": {
+  "file": "nub-dentistp-card.jpg",
+  "w": 1254,
+  "h": 1254
+ },
+ "nub-dentistp-cover-back-bg": {
+  "file": "nub-dentistp-cover-back-bg.jpg",
+  "w": 484,
+  "h": 484
+ },
+ "nub-dentistp-cover-front-bg": {
+  "file": "nub-dentistp-cover-front-bg.jpg",
+  "w": 1254,
+  "h": 1254
+ },
+ "nub-dentistp-p01-bg": {
+  "file": "nub-dentistp-p01-bg.jpg",
+  "w": 593,
+  "h": 593
+ },
+ "nub-dentistp-p02-bg": {
+  "file": "nub-dentistp-p02-bg.jpg",
+  "w": 404,
+  "h": 404
+ },
+ "nub-dentistp-p03-bg": {
+  "file": "nub-dentistp-p03-bg.jpg",
+  "w": 605,
+  "h": 605
+ },
+ "nub-dentistp-p04-bg": {
+  "file": "nub-dentistp-p04-bg.jpg",
+  "w": 605,
+  "h": 605
+ },
+ "nub-dentistp-p05-bg": {
+  "file": "nub-dentistp-p05-bg.jpg",
+  "w": 404,
+  "h": 404
+ },
+ "nub-dentistp-p06-bg": {
+  "file": "nub-dentistp-p06-bg.jpg",
+  "w": 605,
+  "h": 605
+ },
+ "nub-dentistp-p07-bg": {
+  "file": "nub-dentistp-p07-bg.jpg",
+  "w": 404,
+  "h": 404
+ },
+ "nub-dentistp-p08-bg": {
+  "file": "nub-dentistp-p08-bg.jpg",
+  "w": 605,
+  "h": 605
+ },
+ "nub-dentistp-p09-bg": {
+  "file": "nub-dentistp-p09-bg.jpg",
+  "w": 404,
+  "h": 404
+ },
+ "nub-dentistp-p10-bg": {
+  "file": "nub-dentistp-p10-bg.jpg",
+  "w": 605,
+  "h": 605
+ },
+ "nub-dentistp-p11-bg": {
+  "file": "nub-dentistp-p11-bg.jpg",
+  "w": 404,
+  "h": 404
+ },
+ "nub-dentistp-p12-bg": {
+  "file": "nub-dentistp-p12-bg.jpg",
+  "w": 605,
+  "h": 605
+ },
+ "nub-dentistp-p13-bg": {
+  "file": "nub-dentistp-p13-bg.jpg",
+  "w": 404,
+  "h": 404
+ },
+ "nub-dentistp-p14-bg": {
+  "file": "nub-dentistp-p14-bg.jpg",
+  "w": 605,
+  "h": 605
+ },
+ "nub-dentistp-p15-bg": {
+  "file": "nub-dentistp-p15-bg.jpg",
+  "w": 404,
+  "h": 404
+ },
+ "nub-dentistp-p16-bg": {
+  "file": "nub-dentistp-p16-bg.jpg",
+  "w": 605,
+  "h": 605
+ },
+ "nub-dentistp-p17-bg": {
+  "file": "nub-dentistp-p17-bg.jpg",
+  "w": 404,
+  "h": 404
+ },
+ "nub-dentistp-p18-bg": {
+  "file": "nub-dentistp-p18-bg.jpg",
+  "w": 605,
+  "h": 605
+ },
+ "nub-dentistp-p19-bg": {
+  "file": "nub-dentistp-p19-bg.jpg",
+  "w": 404,
+  "h": 404
+ },
+ "nub-dentistp-p20-bg": {
+  "file": "nub-dentistp-p20-bg.jpg",
+  "w": 605,
+  "h": 605
+ },
+ "nub-dentistp-p21-bg": {
+  "file": "nub-dentistp-p21-bg.jpg",
+  "w": 366,
+  "h": 366
+ },
+ "nub-dentistp-p22-bg": {
+  "file": "nub-dentistp-p22-bg.jpg",
+  "w": 382,
+  "h": 382
+ },
+ "nub-dentistp-p23-bg": {
+  "file": "nub-dentistp-p23-bg.jpg",
+  "w": 605,
+  "h": 605
+ },
+ "nub-dentistp-p24-bg": {
+  "file": "nub-dentistp-p24-bg.jpg",
+  "w": 495,
+  "h": 495
+ },
  "nub-dentist-card": {
   "file": "nub-dentist-card.jpg",
   "w": 1500,

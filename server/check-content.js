@@ -12,6 +12,7 @@ const files = c.assets.files;
 const PAGE_PX = Math.round((CONFIG.trimIn + 2 * CONFIG.bleedIn) * 300); // 2625
 const problems = [...c.problems];
 const known = new Set();
+const lowres = new Set();
 
 for (const t of c.titles.filter((x) => x.status !== 'fixture')) {
   const slots = [...t.pages.map((p) => p.id), 'cover-front', 'cover-back'];
@@ -24,6 +25,7 @@ for (const t of c.titles.filter((x) => x.status !== 'fixture')) {
     if (!f) { missing.push(id); continue; }
     have++;
     if (f.w !== f.h) problems.push(`${f.rel}: must be square, is ${f.w}×${f.h}`);
+    else if (f.w < PAGE_PX && t.artStatus === 'screen-sample') lowres.add(t.title);
     else if (f.w < PAGE_PX) problems.push(`${f.rel}: ${f.w}px is below ${PAGE_PX}px (8.75 in at 300 ppi incl. bleed)`);
   }
   known.add(`nub-${t.code}-card`);
@@ -52,5 +54,6 @@ for (const [name, f] of Object.entries(files)) {
   if (name.startsWith('nub-char-v1-')) { if (f.w !== 1500 || f.h !== 2250) problems.push(`${f.rel}: character layers must be 1500×2250, is ${f.w}×${f.h}`); }
   else if (name.startsWith('nub-') && !known.has(name) && !/^nub-(fixture|site|social|guide|partner|logo)(-|$)/.test(name) && !/-card$/.test(name)) problems.push(`${f.rel}: name does not match any page or layer — check the spelling`);
 }
+for (const name of lowres) console.log(`Note: "${name}" is marked as a screen sample; its pictures are far below print size.`);
 console.log(problems.length ? `\n${problems.length} problem(s):\n - ${problems.join('\n - ')}` : '\nNo problems found.');
 process.exitCode = problems.length ? 1 : 0;
