@@ -14,6 +14,431 @@
   "w": 0,
   "h": 0
  },
+ "nub-char-v1-handUp-acc-aac": {
+  "file": "nub-char-v1-handUp-acc-aac.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-acc-earDefenders": {
+  "file": "nub-char-v1-handUp-acc-earDefenders.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-acc-glasses": {
+  "file": "nub-char-v1-handUp-acc-glasses.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-acc-hearingAids": {
+  "file": "nub-char-v1-handUp-acc-hearingAids.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-body-s1": {
+  "file": "nub-char-v1-handUp-body-s1.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-body-s2": {
+  "file": "nub-char-v1-handUp-body-s2.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-body-s3": {
+  "file": "nub-char-v1-handUp-body-s3.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-body-s4": {
+  "file": "nub-char-v1-handUp-body-s4.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-body-s5": {
+  "file": "nub-char-v1-handUp-body-s5.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-body-s6": {
+  "file": "nub-char-v1-handUp-body-s6.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-comfort-bear": {
+  "file": "nub-char-v1-handUp-comfort-bear.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-comfort-bunny": {
+  "file": "nub-char-v1-handUp-comfort-bunny.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-eyes-blue": {
+  "file": "nub-char-v1-handUp-eyes-blue.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-eyes-gray": {
+  "file": "nub-char-v1-handUp-eyes-gray.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-eyes-green": {
+  "file": "nub-char-v1-handUp-eyes-green.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-eyes-hazel": {
+  "file": "nub-char-v1-handUp-eyes-hazel.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hair-bob-black": {
+  "file": "nub-char-v1-handUp-hair-bob-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hair-bob-blonde": {
+  "file": "nub-char-v1-handUp-hair-bob-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hair-bob-brown": {
+  "file": "nub-char-v1-handUp-hair-bob-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hair-bob-red": {
+  "file": "nub-char-v1-handUp-hair-bob-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hair-curls-black": {
+  "file": "nub-char-v1-handUp-hair-curls-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hair-curls-blonde": {
+  "file": "nub-char-v1-handUp-hair-curls-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hair-curls-brown": {
+  "file": "nub-char-v1-handUp-hair-curls-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hair-curls-red": {
+  "file": "nub-char-v1-handUp-hair-curls-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hair-puffs-black": {
+  "file": "nub-char-v1-handUp-hair-puffs-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hair-puffs-blonde": {
+  "file": "nub-char-v1-handUp-hair-puffs-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hair-puffs-brown": {
+  "file": "nub-char-v1-handUp-hair-puffs-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hair-puffs-red": {
+  "file": "nub-char-v1-handUp-hair-puffs-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hair-short-black": {
+  "file": "nub-char-v1-handUp-hair-short-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hair-short-blonde": {
+  "file": "nub-char-v1-handUp-hair-short-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hair-short-brown": {
+  "file": "nub-char-v1-handUp-hair-short-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hair-short-red": {
+  "file": "nub-char-v1-handUp-hair-short-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hair-wavy-black": {
+  "file": "nub-char-v1-handUp-hair-wavy-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hair-wavy-blonde": {
+  "file": "nub-char-v1-handUp-hair-wavy-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hair-wavy-brown": {
+  "file": "nub-char-v1-handUp-hair-wavy-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hair-wavy-red": {
+  "file": "nub-char-v1-handUp-hair-wavy-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hairback-wavy-black": {
+  "file": "nub-char-v1-handUp-hairback-wavy-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hairback-wavy-blonde": {
+  "file": "nub-char-v1-handUp-hairback-wavy-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hairback-wavy-brown": {
+  "file": "nub-char-v1-handUp-hairback-wavy-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-hairback-wavy-red": {
+  "file": "nub-char-v1-handUp-hairback-wavy-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-outfit-cardigan": {
+  "file": "nub-char-v1-handUp-outfit-cardigan.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-outfit-collar": {
+  "file": "nub-char-v1-handUp-outfit-collar.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-outfit-flower": {
+  "file": "nub-char-v1-handUp-outfit-flower.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-outfit-leaf": {
+  "file": "nub-char-v1-handUp-outfit-leaf.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-handUp-outfit-pocket": {
+  "file": "nub-char-v1-handUp-outfit-pocket.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-acc-aac": {
+  "file": "nub-char-v1-sit-acc-aac.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-acc-earDefenders": {
+  "file": "nub-char-v1-sit-acc-earDefenders.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-acc-glasses": {
+  "file": "nub-char-v1-sit-acc-glasses.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-acc-hearingAids": {
+  "file": "nub-char-v1-sit-acc-hearingAids.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-body-s1": {
+  "file": "nub-char-v1-sit-body-s1.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-body-s2": {
+  "file": "nub-char-v1-sit-body-s2.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-body-s3": {
+  "file": "nub-char-v1-sit-body-s3.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-body-s4": {
+  "file": "nub-char-v1-sit-body-s4.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-body-s5": {
+  "file": "nub-char-v1-sit-body-s5.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-body-s6": {
+  "file": "nub-char-v1-sit-body-s6.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-comfort-bear": {
+  "file": "nub-char-v1-sit-comfort-bear.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-comfort-bunny": {
+  "file": "nub-char-v1-sit-comfort-bunny.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-eyes-blue": {
+  "file": "nub-char-v1-sit-eyes-blue.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-eyes-gray": {
+  "file": "nub-char-v1-sit-eyes-gray.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-eyes-green": {
+  "file": "nub-char-v1-sit-eyes-green.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-eyes-hazel": {
+  "file": "nub-char-v1-sit-eyes-hazel.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hair-bob-black": {
+  "file": "nub-char-v1-sit-hair-bob-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hair-bob-blonde": {
+  "file": "nub-char-v1-sit-hair-bob-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hair-bob-brown": {
+  "file": "nub-char-v1-sit-hair-bob-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hair-bob-red": {
+  "file": "nub-char-v1-sit-hair-bob-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hair-curls-black": {
+  "file": "nub-char-v1-sit-hair-curls-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hair-curls-blonde": {
+  "file": "nub-char-v1-sit-hair-curls-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hair-curls-brown": {
+  "file": "nub-char-v1-sit-hair-curls-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hair-curls-red": {
+  "file": "nub-char-v1-sit-hair-curls-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hair-puffs-black": {
+  "file": "nub-char-v1-sit-hair-puffs-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hair-puffs-blonde": {
+  "file": "nub-char-v1-sit-hair-puffs-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hair-puffs-brown": {
+  "file": "nub-char-v1-sit-hair-puffs-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hair-puffs-red": {
+  "file": "nub-char-v1-sit-hair-puffs-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hair-short-black": {
+  "file": "nub-char-v1-sit-hair-short-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hair-short-blonde": {
+  "file": "nub-char-v1-sit-hair-short-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hair-short-brown": {
+  "file": "nub-char-v1-sit-hair-short-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hair-short-red": {
+  "file": "nub-char-v1-sit-hair-short-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hair-wavy-black": {
+  "file": "nub-char-v1-sit-hair-wavy-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hair-wavy-blonde": {
+  "file": "nub-char-v1-sit-hair-wavy-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hair-wavy-brown": {
+  "file": "nub-char-v1-sit-hair-wavy-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hair-wavy-red": {
+  "file": "nub-char-v1-sit-hair-wavy-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hairback-wavy-black": {
+  "file": "nub-char-v1-sit-hairback-wavy-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hairback-wavy-blonde": {
+  "file": "nub-char-v1-sit-hairback-wavy-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hairback-wavy-brown": {
+  "file": "nub-char-v1-sit-hairback-wavy-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-hairback-wavy-red": {
+  "file": "nub-char-v1-sit-hairback-wavy-red.png",
+  "w": 1500,
+  "h": 2250
+ },
  "nub-char-v1-sit-mobility-wheelchair-front": {
   "file": "nub-char-v1-sit-mobility-wheelchair-front.png",
   "w": 1500,
@@ -21,6 +446,241 @@
  },
  "nub-char-v1-sit-mobility-wheelchair": {
   "file": "nub-char-v1-sit-mobility-wheelchair.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-outfit-cardigan": {
+  "file": "nub-char-v1-sit-outfit-cardigan.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-outfit-collar": {
+  "file": "nub-char-v1-sit-outfit-collar.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-outfit-flower": {
+  "file": "nub-char-v1-sit-outfit-flower.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-outfit-leaf": {
+  "file": "nub-char-v1-sit-outfit-leaf.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-outfit-pocket": {
+  "file": "nub-char-v1-sit-outfit-pocket.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-wear-bib": {
+  "file": "nub-char-v1-sit-wear-bib.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-wear-cape": {
+  "file": "nub-char-v1-sit-wear-cape.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-acc-aac": {
+  "file": "nub-char-v1-sitHandUp-acc-aac.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-acc-earDefenders": {
+  "file": "nub-char-v1-sitHandUp-acc-earDefenders.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-acc-glasses": {
+  "file": "nub-char-v1-sitHandUp-acc-glasses.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-acc-hearingAids": {
+  "file": "nub-char-v1-sitHandUp-acc-hearingAids.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-body-s1": {
+  "file": "nub-char-v1-sitHandUp-body-s1.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-body-s2": {
+  "file": "nub-char-v1-sitHandUp-body-s2.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-body-s3": {
+  "file": "nub-char-v1-sitHandUp-body-s3.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-body-s4": {
+  "file": "nub-char-v1-sitHandUp-body-s4.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-body-s5": {
+  "file": "nub-char-v1-sitHandUp-body-s5.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-body-s6": {
+  "file": "nub-char-v1-sitHandUp-body-s6.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-comfort-bear": {
+  "file": "nub-char-v1-sitHandUp-comfort-bear.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-comfort-bunny": {
+  "file": "nub-char-v1-sitHandUp-comfort-bunny.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-eyes-blue": {
+  "file": "nub-char-v1-sitHandUp-eyes-blue.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-eyes-gray": {
+  "file": "nub-char-v1-sitHandUp-eyes-gray.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-eyes-green": {
+  "file": "nub-char-v1-sitHandUp-eyes-green.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-eyes-hazel": {
+  "file": "nub-char-v1-sitHandUp-eyes-hazel.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hair-bob-black": {
+  "file": "nub-char-v1-sitHandUp-hair-bob-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hair-bob-blonde": {
+  "file": "nub-char-v1-sitHandUp-hair-bob-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hair-bob-brown": {
+  "file": "nub-char-v1-sitHandUp-hair-bob-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hair-bob-red": {
+  "file": "nub-char-v1-sitHandUp-hair-bob-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hair-curls-black": {
+  "file": "nub-char-v1-sitHandUp-hair-curls-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hair-curls-blonde": {
+  "file": "nub-char-v1-sitHandUp-hair-curls-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hair-curls-brown": {
+  "file": "nub-char-v1-sitHandUp-hair-curls-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hair-curls-red": {
+  "file": "nub-char-v1-sitHandUp-hair-curls-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hair-puffs-black": {
+  "file": "nub-char-v1-sitHandUp-hair-puffs-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hair-puffs-blonde": {
+  "file": "nub-char-v1-sitHandUp-hair-puffs-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hair-puffs-brown": {
+  "file": "nub-char-v1-sitHandUp-hair-puffs-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hair-puffs-red": {
+  "file": "nub-char-v1-sitHandUp-hair-puffs-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hair-short-black": {
+  "file": "nub-char-v1-sitHandUp-hair-short-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hair-short-blonde": {
+  "file": "nub-char-v1-sitHandUp-hair-short-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hair-short-brown": {
+  "file": "nub-char-v1-sitHandUp-hair-short-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hair-short-red": {
+  "file": "nub-char-v1-sitHandUp-hair-short-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hair-wavy-black": {
+  "file": "nub-char-v1-sitHandUp-hair-wavy-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hair-wavy-blonde": {
+  "file": "nub-char-v1-sitHandUp-hair-wavy-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hair-wavy-brown": {
+  "file": "nub-char-v1-sitHandUp-hair-wavy-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hair-wavy-red": {
+  "file": "nub-char-v1-sitHandUp-hair-wavy-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hairback-wavy-black": {
+  "file": "nub-char-v1-sitHandUp-hairback-wavy-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hairback-wavy-blonde": {
+  "file": "nub-char-v1-sitHandUp-hairback-wavy-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hairback-wavy-brown": {
+  "file": "nub-char-v1-sitHandUp-hairback-wavy-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-hairback-wavy-red": {
+  "file": "nub-char-v1-sitHandUp-hairback-wavy-red.png",
   "w": 1500,
   "h": 2250
  },
@@ -34,6 +694,236 @@
   "w": 1500,
   "h": 2250
  },
+ "nub-char-v1-sitHandUp-outfit-cardigan": {
+  "file": "nub-char-v1-sitHandUp-outfit-cardigan.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-outfit-collar": {
+  "file": "nub-char-v1-sitHandUp-outfit-collar.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-outfit-flower": {
+  "file": "nub-char-v1-sitHandUp-outfit-flower.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-outfit-leaf": {
+  "file": "nub-char-v1-sitHandUp-outfit-leaf.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-outfit-pocket": {
+  "file": "nub-char-v1-sitHandUp-outfit-pocket.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-wear-bib": {
+  "file": "nub-char-v1-sitHandUp-wear-bib.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-acc-aac": {
+  "file": "nub-char-v1-sitWave-acc-aac.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-acc-earDefenders": {
+  "file": "nub-char-v1-sitWave-acc-earDefenders.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-acc-glasses": {
+  "file": "nub-char-v1-sitWave-acc-glasses.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-acc-hearingAids": {
+  "file": "nub-char-v1-sitWave-acc-hearingAids.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-body-s1": {
+  "file": "nub-char-v1-sitWave-body-s1.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-body-s2": {
+  "file": "nub-char-v1-sitWave-body-s2.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-body-s3": {
+  "file": "nub-char-v1-sitWave-body-s3.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-body-s4": {
+  "file": "nub-char-v1-sitWave-body-s4.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-body-s5": {
+  "file": "nub-char-v1-sitWave-body-s5.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-body-s6": {
+  "file": "nub-char-v1-sitWave-body-s6.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-comfort-bear": {
+  "file": "nub-char-v1-sitWave-comfort-bear.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-comfort-bunny": {
+  "file": "nub-char-v1-sitWave-comfort-bunny.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-eyes-blue": {
+  "file": "nub-char-v1-sitWave-eyes-blue.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-eyes-gray": {
+  "file": "nub-char-v1-sitWave-eyes-gray.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-eyes-green": {
+  "file": "nub-char-v1-sitWave-eyes-green.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-eyes-hazel": {
+  "file": "nub-char-v1-sitWave-eyes-hazel.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hair-bob-black": {
+  "file": "nub-char-v1-sitWave-hair-bob-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hair-bob-blonde": {
+  "file": "nub-char-v1-sitWave-hair-bob-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hair-bob-brown": {
+  "file": "nub-char-v1-sitWave-hair-bob-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hair-bob-red": {
+  "file": "nub-char-v1-sitWave-hair-bob-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hair-curls-black": {
+  "file": "nub-char-v1-sitWave-hair-curls-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hair-curls-blonde": {
+  "file": "nub-char-v1-sitWave-hair-curls-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hair-curls-brown": {
+  "file": "nub-char-v1-sitWave-hair-curls-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hair-curls-red": {
+  "file": "nub-char-v1-sitWave-hair-curls-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hair-puffs-black": {
+  "file": "nub-char-v1-sitWave-hair-puffs-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hair-puffs-blonde": {
+  "file": "nub-char-v1-sitWave-hair-puffs-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hair-puffs-brown": {
+  "file": "nub-char-v1-sitWave-hair-puffs-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hair-puffs-red": {
+  "file": "nub-char-v1-sitWave-hair-puffs-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hair-short-black": {
+  "file": "nub-char-v1-sitWave-hair-short-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hair-short-blonde": {
+  "file": "nub-char-v1-sitWave-hair-short-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hair-short-brown": {
+  "file": "nub-char-v1-sitWave-hair-short-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hair-short-red": {
+  "file": "nub-char-v1-sitWave-hair-short-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hair-wavy-black": {
+  "file": "nub-char-v1-sitWave-hair-wavy-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hair-wavy-blonde": {
+  "file": "nub-char-v1-sitWave-hair-wavy-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hair-wavy-brown": {
+  "file": "nub-char-v1-sitWave-hair-wavy-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hair-wavy-red": {
+  "file": "nub-char-v1-sitWave-hair-wavy-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hairback-wavy-black": {
+  "file": "nub-char-v1-sitWave-hairback-wavy-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hairback-wavy-blonde": {
+  "file": "nub-char-v1-sitWave-hairback-wavy-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hairback-wavy-brown": {
+  "file": "nub-char-v1-sitWave-hairback-wavy-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-hairback-wavy-red": {
+  "file": "nub-char-v1-sitWave-hairback-wavy-red.png",
+  "w": 1500,
+  "h": 2250
+ },
  "nub-char-v1-sitWave-mobility-wheelchair-front": {
   "file": "nub-char-v1-sitWave-mobility-wheelchair-front.png",
   "w": 1500,
@@ -41,6 +931,261 @@
  },
  "nub-char-v1-sitWave-mobility-wheelchair": {
   "file": "nub-char-v1-sitWave-mobility-wheelchair.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-outfit-cardigan": {
+  "file": "nub-char-v1-sitWave-outfit-cardigan.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-outfit-collar": {
+  "file": "nub-char-v1-sitWave-outfit-collar.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-outfit-flower": {
+  "file": "nub-char-v1-sitWave-outfit-flower.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-outfit-leaf": {
+  "file": "nub-char-v1-sitWave-outfit-leaf.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-outfit-pocket": {
+  "file": "nub-char-v1-sitWave-outfit-pocket.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-wear-bib": {
+  "file": "nub-char-v1-sitWave-wear-bib.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-acc-aac": {
+  "file": "nub-char-v1-stand-acc-aac.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-acc-earDefenders": {
+  "file": "nub-char-v1-stand-acc-earDefenders.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-acc-glasses": {
+  "file": "nub-char-v1-stand-acc-glasses.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-acc-hearingAids": {
+  "file": "nub-char-v1-stand-acc-hearingAids.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-body-s1": {
+  "file": "nub-char-v1-stand-body-s1.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-body-s2": {
+  "file": "nub-char-v1-stand-body-s2.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-body-s3": {
+  "file": "nub-char-v1-stand-body-s3.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-body-s4": {
+  "file": "nub-char-v1-stand-body-s4.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-body-s5": {
+  "file": "nub-char-v1-stand-body-s5.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-body-s6": {
+  "file": "nub-char-v1-stand-body-s6.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-comfort-bear": {
+  "file": "nub-char-v1-stand-comfort-bear.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-comfort-bunny": {
+  "file": "nub-char-v1-stand-comfort-bunny.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-eyes-blue": {
+  "file": "nub-char-v1-stand-eyes-blue.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-eyes-gray": {
+  "file": "nub-char-v1-stand-eyes-gray.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-eyes-green": {
+  "file": "nub-char-v1-stand-eyes-green.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-eyes-hazel": {
+  "file": "nub-char-v1-stand-eyes-hazel.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hair-bob-black": {
+  "file": "nub-char-v1-stand-hair-bob-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hair-bob-blonde": {
+  "file": "nub-char-v1-stand-hair-bob-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hair-bob-brown": {
+  "file": "nub-char-v1-stand-hair-bob-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hair-bob-red": {
+  "file": "nub-char-v1-stand-hair-bob-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hair-curls-black": {
+  "file": "nub-char-v1-stand-hair-curls-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hair-curls-blonde": {
+  "file": "nub-char-v1-stand-hair-curls-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hair-curls-brown": {
+  "file": "nub-char-v1-stand-hair-curls-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hair-curls-red": {
+  "file": "nub-char-v1-stand-hair-curls-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hair-puffs-black": {
+  "file": "nub-char-v1-stand-hair-puffs-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hair-puffs-blonde": {
+  "file": "nub-char-v1-stand-hair-puffs-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hair-puffs-brown": {
+  "file": "nub-char-v1-stand-hair-puffs-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hair-puffs-red": {
+  "file": "nub-char-v1-stand-hair-puffs-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hair-short-black": {
+  "file": "nub-char-v1-stand-hair-short-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hair-short-blonde": {
+  "file": "nub-char-v1-stand-hair-short-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hair-short-brown": {
+  "file": "nub-char-v1-stand-hair-short-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hair-short-red": {
+  "file": "nub-char-v1-stand-hair-short-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hair-wavy-black": {
+  "file": "nub-char-v1-stand-hair-wavy-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hair-wavy-blonde": {
+  "file": "nub-char-v1-stand-hair-wavy-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hair-wavy-brown": {
+  "file": "nub-char-v1-stand-hair-wavy-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hair-wavy-red": {
+  "file": "nub-char-v1-stand-hair-wavy-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hairback-wavy-black": {
+  "file": "nub-char-v1-stand-hairback-wavy-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hairback-wavy-blonde": {
+  "file": "nub-char-v1-stand-hairback-wavy-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hairback-wavy-brown": {
+  "file": "nub-char-v1-stand-hairback-wavy-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-hairback-wavy-red": {
+  "file": "nub-char-v1-stand-hairback-wavy-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-outfit-cardigan": {
+  "file": "nub-char-v1-stand-outfit-cardigan.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-outfit-collar": {
+  "file": "nub-char-v1-stand-outfit-collar.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-outfit-flower": {
+  "file": "nub-char-v1-stand-outfit-flower.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-outfit-leaf": {
+  "file": "nub-char-v1-stand-outfit-leaf.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-stand-outfit-pocket": {
+  "file": "nub-char-v1-stand-outfit-pocket.png",
   "w": 1500,
   "h": 2250
  },
