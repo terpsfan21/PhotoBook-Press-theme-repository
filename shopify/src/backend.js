@@ -23,7 +23,14 @@ const sized = (file) => {
   return file;
 };
 const files = {};
-for (const [name, f] of Object.entries(assetIndex)) files[name] = { url: new URL(sized(f.file), import.meta.url).href, w: f.w, h: f.h };
+// DRAFT ONLY: the ~290 character layers are read straight from the public
+// GitHub repository at a fixed commit instead of being copied into the theme.
+// For launch they belong in the store's own files.
+/* global NUB_CHAR_BASE */
+for (const [name, f] of Object.entries(assetIndex)) {
+  const remote = NUB_CHAR_BASE && /^nub-char-/.test(f.file);
+  files[name] = { url: remote ? NUB_CHAR_BASE + f.file : new URL(sized(f.file), import.meta.url).href, w: f.w, h: f.h };
+}
 Object.assign(files, cfg.assets || {});
 const variants = cfg.variants || {};
 const real = Object.values(variants).some((v) => v && v.softcover && v.hardcover);

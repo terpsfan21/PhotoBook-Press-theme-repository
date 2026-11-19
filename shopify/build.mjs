@@ -19,6 +19,6 @@ const scoped = `.nub-app {\n${app}\n}\n${fs.readFileSync('public/book.css', 'utf
 const css = (await esbuild.transform(scoped, { loader: 'css', minify: true, target: ['chrome100', 'safari15', 'firefox100'] })).code;
 await esbuild.build({
   entryPoints: ['shopify/src/entry.js'], bundle: true, format: 'esm', minify: true, target: ['es2022'],
-  outfile: 'shopify/dist/nub-storefront.js', define: { NUB_CSS: JSON.stringify(css) }, legalComments: 'none',
+  outfile: 'shopify/dist/nub-storefront.js', define: { NUB_CSS: JSON.stringify(css), NUB_CHAR_BASE: JSON.stringify(process.env.NUB_CHAR_BASE || '') }, legalComments: 'none',
 });
 console.log('built', fs.statSync('shopify/dist/nub-storefront.js').size, 'bytes; css', css.length);
