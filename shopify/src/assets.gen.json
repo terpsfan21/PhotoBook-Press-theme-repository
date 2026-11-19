@@ -14,8 +14,58 @@
   "w": 0,
   "h": 0
  },
+ "nub-char-v1-sit-mobility-wheelchair-front": {
+  "file": "nub-char-v1-sit-mobility-wheelchair-front.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sit-mobility-wheelchair": {
+  "file": "nub-char-v1-sit-mobility-wheelchair.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-mobility-wheelchair-front": {
+  "file": "nub-char-v1-sitHandUp-mobility-wheelchair-front.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitHandUp-mobility-wheelchair": {
+  "file": "nub-char-v1-sitHandUp-mobility-wheelchair.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-mobility-wheelchair-front": {
+  "file": "nub-char-v1-sitWave-mobility-wheelchair-front.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-sitWave-mobility-wheelchair": {
+  "file": "nub-char-v1-sitWave-mobility-wheelchair.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-acc-aac": {
+  "file": "nub-char-v1-wave-acc-aac.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-acc-earDefenders": {
+  "file": "nub-char-v1-wave-acc-earDefenders.png",
+  "w": 1500,
+  "h": 2250
+ },
  "nub-char-v1-wave-acc-glasses": {
   "file": "nub-char-v1-wave-acc-glasses.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-acc-hearingAids": {
+  "file": "nub-char-v1-wave-acc-hearingAids.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-body-s1": {
+  "file": "nub-char-v1-wave-body-s1.png",
   "w": 1500,
   "h": 2250
  },
@@ -24,8 +74,53 @@
   "w": 1500,
   "h": 2250
  },
+ "nub-char-v1-wave-body-s3": {
+  "file": "nub-char-v1-wave-body-s3.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-body-s4": {
+  "file": "nub-char-v1-wave-body-s4.png",
+  "w": 1500,
+  "h": 2250
+ },
  "nub-char-v1-wave-body-s5": {
   "file": "nub-char-v1-wave-body-s5.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-body-s6": {
+  "file": "nub-char-v1-wave-body-s6.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-comfort-bear": {
+  "file": "nub-char-v1-wave-comfort-bear.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-comfort-bunny": {
+  "file": "nub-char-v1-wave-comfort-bunny.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-eyes-blue": {
+  "file": "nub-char-v1-wave-eyes-blue.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-eyes-gray": {
+  "file": "nub-char-v1-wave-eyes-gray.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-eyes-green": {
+  "file": "nub-char-v1-wave-eyes-green.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-eyes-hazel": {
+  "file": "nub-char-v1-wave-eyes-hazel.png",
   "w": 1500,
   "h": 2250
  },
@@ -34,8 +129,18 @@
   "w": 1500,
   "h": 2250
  },
+ "nub-char-v1-wave-hair-bob-blonde": {
+  "file": "nub-char-v1-wave-hair-bob-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
  "nub-char-v1-wave-hair-bob-brown": {
   "file": "nub-char-v1-wave-hair-bob-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-hair-bob-red": {
+  "file": "nub-char-v1-wave-hair-bob-red.png",
   "w": 1500,
   "h": 2250
  },
@@ -44,8 +149,98 @@
   "w": 1500,
   "h": 2250
  },
+ "nub-char-v1-wave-hair-curls-blonde": {
+  "file": "nub-char-v1-wave-hair-curls-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
  "nub-char-v1-wave-hair-curls-brown": {
   "file": "nub-char-v1-wave-hair-curls-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-hair-curls-red": {
+  "file": "nub-char-v1-wave-hair-curls-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-hair-puffs-black": {
+  "file": "nub-char-v1-wave-hair-puffs-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-hair-puffs-blonde": {
+  "file": "nub-char-v1-wave-hair-puffs-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-hair-puffs-brown": {
+  "file": "nub-char-v1-wave-hair-puffs-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-hair-puffs-red": {
+  "file": "nub-char-v1-wave-hair-puffs-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-hair-short-black": {
+  "file": "nub-char-v1-wave-hair-short-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-hair-short-blonde": {
+  "file": "nub-char-v1-wave-hair-short-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-hair-short-brown": {
+  "file": "nub-char-v1-wave-hair-short-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-hair-short-red": {
+  "file": "nub-char-v1-wave-hair-short-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-hair-wavy-black": {
+  "file": "nub-char-v1-wave-hair-wavy-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-hair-wavy-blonde": {
+  "file": "nub-char-v1-wave-hair-wavy-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-hair-wavy-brown": {
+  "file": "nub-char-v1-wave-hair-wavy-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-hair-wavy-red": {
+  "file": "nub-char-v1-wave-hair-wavy-red.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-hairback-wavy-black": {
+  "file": "nub-char-v1-wave-hairback-wavy-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-hairback-wavy-blonde": {
+  "file": "nub-char-v1-wave-hairback-wavy-blonde.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-hairback-wavy-brown": {
+  "file": "nub-char-v1-wave-hairback-wavy-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-hairback-wavy-red": {
+  "file": "nub-char-v1-wave-hairback-wavy-red.png",
   "w": 1500,
   "h": 2250
  },
@@ -54,8 +249,23 @@
   "w": 1500,
   "h": 2250
  },
+ "nub-char-v1-wave-outfit-collar": {
+  "file": "nub-char-v1-wave-outfit-collar.png",
+  "w": 1500,
+  "h": 2250
+ },
  "nub-char-v1-wave-outfit-flower": {
   "file": "nub-char-v1-wave-outfit-flower.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-outfit-leaf": {
+  "file": "nub-char-v1-wave-outfit-leaf.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-outfit-pocket": {
+  "file": "nub-char-v1-wave-outfit-pocket.png",
   "w": 1500,
   "h": 2250
  },
