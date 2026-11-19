@@ -1,0 +1,23 @@
+{
+ "schema": "nub-title/1",
+ "id": "fixture",
+ "code": "fixture",
+ "handle": "layering-fixture",
+ "title": "Layering fixture (supplied classroom art)",
+ "status": "fixture",
+ "storyVersion": "fixture",
+ "interiorPageCount": 1,
+ "variants": [],
+ "availability": { "supports": {}, "mobility": { "none": true }, "comfort": { "none": true } },
+ "cast": {},
+ "pages": [
+  {
+   "id": "p01",
+   "layers": [
+    { "type": "image", "file": "nub-fixture-child-full", "at": [245, 870], "height": 450 }
+   ],
+   "text": { "std": "{Name} walks into the classroom. The teacher waves hello.", "easy": "{Name} walks in. The teacher waves." },
+   "alt": "{child} stands in a classroom while a teacher kneels and waves."
+  }
+ ]
+}

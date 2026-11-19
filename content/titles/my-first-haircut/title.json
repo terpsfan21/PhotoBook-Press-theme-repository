@@ -1,0 +1,763 @@
+{
+ "schema": "nub-title/1",
+ "id": "haircut",
+ "code": "haircut",
+ "handle": "my-first-haircut",
+ "title": "My First Haircut",
+ "short": "Haircut",
+ "storyVersion": "1.0.0-draft",
+ "copyStatus": "draft-unreviewed",
+ "status": "prototype",
+ "cardImage": "nub-haircut-card.jpg",
+ "blurb": "Meet the stylist, choose a seat, see the cape and the tools, hear the scissors and clippers, and ask for a break.",
+ "interiorPageCount": 24,
+ "variants": [
+  {
+   "id": 51000000201,
+   "binding": "softcover",
+   "sku": "NUB-HAIR-SC-85"
+  },
+  {
+   "id": 51000000202,
+   "binding": "hardcover",
+   "sku": "NUB-HAIR-HC-85"
+  }
+ ],
+ "video": null,
+ "availability": {
+  "supports": {
+   "glasses": true,
+   "hearingAids": true,
+   "earDefenders": true,
+   "aac": true
+  },
+  "mobility": {
+   "none": true,
+   "wheelchair": true,
+   "walker": false
+  },
+  "comfort": {
+   "none": true,
+   "bunny": true,
+   "bear": true
+  }
+ },
+ "cast": {
+  "caregiver": {
+   "inherit": [
+    "skin",
+    "hairColor"
+   ],
+   "hairStyle": "wavy",
+   "eyes": "brown",
+   "outfit": "sweater"
+  },
+  "stylist": {
+   "skin": "s5",
+   "hairStyle": "braids",
+   "hairColor": "black",
+   "eyes": "brown",
+   "outfit": "apron"
+  }
+ },
+ "cover": {
+  "front": {
+   "id": "cover-front",
+   "style": "cover",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "plain",
+     "params": {
+      "tone": "#e9b79a"
+     }
+    },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "scissors"
+      }
+     ],
+     "area": [690, 470, 210, 210]
+    },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "comb"
+      }
+     ],
+     "area": [100, 470, 210, 210]
+    },
+    { "type": "child", "pose": "wave", "at": [ 500, 930 ], "scale": 1.45 }
+   ],
+   "text": {
+    "title": "My First Haircut",
+    "std": "A story for {name}",
+    "easy": "A story for {name}",
+    "noName": {
+     "std": "A little story for a big first",
+     "easy": "A little story for a big first"
+    }
+   },
+   "alt": "{child} waves on the cover, between a comb and a pair of scissors."
+  },
+  "back": {
+   "id": "cover-back",
+   "style": "back",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "plain",
+     "params": {
+      "tone": "#e9b79a"
+     }
+    },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "star"
+      },
+      {
+       "icon": "scissors"
+      },
+      {
+       "icon": "heart"
+      }
+     ],
+     "area": [300, 610, 400, 130]
+    }
+   ],
+   "text": {
+    "title": "For the grown-up reading along",
+    "std": "{Name} can read this book before {their} haircut, as many times as {they} {v:likes|like}. Every salon is different. Ask the stylist what {name} can choose, and agree on a break signal first.",
+    "easy": "{Name} can read this book before {their} haircut, as many times as {they} {v:likes|like}. Every salon is different. Ask the stylist what {name} can choose, and agree on a break signal first.",
+    "variants": [
+     {
+      "when": {
+       "pronouns": "none"
+      },
+      "std": "Read this book together before the haircut, as many times as you like. Every salon is different. Ask the stylist what choices there are, and agree on a break signal first.",
+      "easy": "Read this book together before the haircut, as many times as you like. Every salon is different. Ask the stylist what choices there are, and agree on a break signal first."
+     }
+    ]
+   },
+   "alt": "Back cover with a note for the grown-up."
+  }
+ },
+ "pages": [
+  {
+   "id": "p01",
+   "style": "title",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "plain",
+     "params": {
+      "tone": "#f4e4c9"
+     }
+    },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "comb"
+      }
+     ],
+     "area": [90, 430, 200, 200]
+    },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "scissors"
+      }
+     ],
+     "area": [710, 430, 200, 200]
+    },
+    { "type": "child", "pose": "wave", "at": [ 500, 930 ], "scale": 1.4 }
+   ],
+   "text": {
+    "title": "My First Haircut",
+    "std": "A story for {name}",
+    "easy": "A story for {name}",
+    "noName": {
+     "std": "A story about a first haircut",
+     "easy": "A story about a first haircut"
+    }
+   },
+   "alt": "Title page. {child} waves hello."
+  },
+  {
+   "id": "p02",
+   "layers": [
+    { "type": "bg", "id": "home" },
+    { "type": "child", "pose": "wave", "at": [ 400, 700 ] }
+   ],
+   "text": {
+    "std": "My name is {name}. Soon I will get a haircut.",
+    "easy": "I am {name}. I will get a haircut.",
+    "noName": {
+     "std": "Soon I will get a haircut.",
+     "easy": "I will get a haircut."
+    }
+   },
+   "alt": "{child} stands at home near a calendar with one day circled."
+  },
+  {
+   "id": "p03",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "plain",
+     "params": {
+      "tone": "#f1dfc0"
+     }
+    },
+    { "type": "child", "pose": "stand", "at": [ 260, 720 ], "scale": 1.35 },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "hair"
+      },
+      {
+       "icon": "scissors"
+      }
+     ],
+     "area": [480, 220, 440, 380]
+    }
+   ],
+   "text": {
+    "std": "Hair grows a little every day. A haircut makes it shorter or neater.",
+    "easy": "Hair grows. A haircut makes it shorter."
+   },
+   "alt": "{child} stands beside pictures of long hair and a pair of scissors."
+  },
+  {
+   "id": "p04",
+   "layers": [
+    { "type": "bg", "id": "home" },
+    { "type": "adult", "who": "caregiver", "pose": "stand", "at": [ 330, 700 ] },
+    { "type": "child", "pose": "holdHand", "at": [ 520, 700 ] }
+   ],
+   "text": {
+    "std": "A grown-up I know will come with me.",
+    "easy": "My grown-up comes with me."
+   },
+   "alt": "{child} stands beside a grown-up at home."
+  },
+  {
+   "id": "p05",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "outside",
+     "params": {
+      "kind": "salon"
+     }
+    },
+    { "type": "adult", "who": "caregiver", "pose": "stand", "at": [ 170, 740 ] },
+    { "type": "child", "pose": "point", "at": [ 310, 740 ] }
+   ],
+   "text": {
+    "std": "We go to the hair salon or barbershop.",
+    "easy": "We go to the hair salon."
+   },
+   "alt": "{child} and a grown-up arrive outside a hair salon with a striped awning."
+  },
+  {
+   "id": "p06",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "waiting",
+     "params": {
+      "kind": "salon"
+     }
+    },
+    { "type": "adult", "who": "caregiver", "pose": "stand", "at": [ 330, 700 ] },
+    { "type": "child", "pose": "stand", "at": [ 490, 700 ] }
+   ],
+   "text": {
+    "std": "Inside, there may be mirrors, chairs, and other people.",
+    "easy": "Inside there are chairs and mirrors."
+   },
+   "alt": "{child} and a grown-up stand inside the salon waiting area."
+  },
+  {
+   "id": "p07",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "plain",
+     "params": {
+      "tone": "#f3dcc4"
+     }
+    },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "sound",
+       "label": "sounds"
+      },
+      {
+       "icon": "sprayBottle",
+       "label": "smells"
+      }
+     ],
+     "area": [140, 180, 720, 440]
+    }
+   ],
+   "text": {
+    "std": "It may smell like shampoo. I may hear talking, music, or a hair dryer.",
+    "easy": "There may be new smells and sounds."
+   },
+   "alt": "Two picture cards: a sound symbol and a spray bottle."
+  },
+  {
+   "id": "p08",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "waiting",
+     "params": {
+      "kind": "salon"
+     }
+    },
+    {
+     "type": "prop",
+     "id": "smallChair",
+     "at": [300, 700],
+     "scale": 1.6,
+     "params": {
+      "color": "#6fa3a0"
+     }
+    },
+    { "type": "adult", "who": "caregiver", "pose": "sit", "at": [ 300, 700 ] },
+    { "type": "prop", "id": "smallChair", "at": [ 520, 700 ], "hideWhen": "wheelchair" },
+    { "type": "child", "pose": "sit", "at": [ 520, 700 ] }
+   ],
+   "text": {
+    "std": "I might wait for a little while. I can bring something that helps me wait.",
+    "easy": "I might wait a little."
+   },
+   "alt": "{child} sits in the waiting area next to a grown-up."
+  },
+  {
+   "id": "p09",
+   "layers": [
+    { "type": "bg", "id": "salon" },
+    { "type": "adult", "who": "caregiver", "pose": "stand", "at": [ 230, 700 ] },
+    { "type": "child", "pose": "wave", "at": [ 400, 700 ] },
+    { "type": "adult", "who": "stylist", "pose": "wave", "at": [ 730, 700 ], "flip": true }
+   ],
+   "text": {
+    "std": "The person who cuts hair is called a stylist or a barber. They say hello.",
+    "easy": "The stylist says hello."
+   },
+   "alt": "A stylist in an apron waves hello to {child}."
+  },
+  {
+   "id": "p10",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "plain",
+     "params": {
+      "tone": "#f1dfc0"
+     }
+    },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "chairBig",
+       "label": "big chair"
+      },
+      {
+       "icon": "chairSmall",
+       "label": "small chair"
+      },
+      {
+       "icon": "heart",
+       "label": "a lap"
+      }
+     ],
+     "area": [90, 200, 820, 420]
+    }
+   ],
+   "text": {
+    "std": "I can choose where to sit, if there is a choice. A big chair, a small chair, or my grown-up’s lap.",
+    "easy": "I can ask where I can sit.",
+    "variants": [
+     {
+      "when": {
+       "mobility": "wheelchair"
+      },
+      "std": "I can ask where to sit, if there is a choice. I can ask to stay in my own chair.",
+      "easy": "I can ask to stay in my own chair."
+     }
+    ]
+   },
+   "alt": "Three picture cards: a big salon chair, a small chair and a heart for a lap."
+  },
+  {
+   "id": "p11",
+   "layers": [
+    { "type": "bg", "id": "salon" },
+    { "type": "prop", "id": "salonChair", "at": [ 480, 700 ], "hideWhen": "wheelchair" },
+    { "type": "child", "pose": "sit", "at": [ 480, 590 ], "wheelchairAt": [ 480, 700 ] },
+    { "type": "adult", "who": "stylist", "pose": "point", "at": [ 770, 700 ], "flip": true }
+   ],
+   "text": {
+    "std": "The big chair may go up and down.",
+    "easy": "The big chair may go up.",
+    "variants": [
+     {
+      "when": {
+       "mobility": "wheelchair"
+      },
+      "std": "The stylist finds a good spot by the mirror for my chair.",
+      "easy": "My chair goes by the mirror."
+     }
+    ]
+   },
+   "alt": "{child} is seated in front of a round mirror. The stylist stands nearby."
+  },
+  {
+   "id": "p12",
+   "layers": [
+    { "type": "bg", "id": "salon" },
+    { "type": "prop", "id": "salonChair", "at": [ 480, 700 ], "hideWhen": "wheelchair" },
+    { "type": "child", "pose": "sit", "at": [ 480, 590 ], "wheelchairAt": [ 480, 700 ], "wear": "cape" },
+    { "type": "adult", "who": "stylist", "pose": "stand", "at": [ 770, 700 ], "flip": true },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "cape"
+      }
+     ],
+     "area": [60, 300, 180, 180]
+    }
+   ],
+   "text": {
+    "std": "The stylist puts a cape around me. It keeps hair off my clothes.",
+    "easy": "I wear a cape. It keeps hair off me."
+   },
+   "alt": "{child} wears a teal haircut cape. A card shows the cape."
+  },
+  {
+   "id": "p13",
+   "layers": [
+    { "type": "bg", "id": "salon" },
+    { "type": "adult", "who": "caregiver", "pose": "stand", "at": [ 200, 700 ] },
+    { "type": "prop", "id": "salonChair", "at": [ 480, 700 ], "hideWhen": "wheelchair" },
+    { "type": "child", "pose": "sit", "at": [ 480, 590 ], "wheelchairAt": [ 480, 700 ], "wear": "cape" },
+    { "type": "adult", "who": "stylist", "pose": "wave", "at": [ 790, 700 ], "flip": true }
+   ],
+   "text": {
+    "std": "The cape may feel snug at my neck. I can ask to make it looser.",
+    "easy": "I can ask to loosen the cape."
+   },
+   "alt": "{child} sits in the cape between a grown-up and the stylist."
+  },
+  {
+   "id": "p14",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "plain",
+     "params": {
+      "tone": "#f3dcc4"
+     }
+    },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "comb",
+       "label": "comb"
+      },
+      {
+       "icon": "scissors",
+       "label": "scissors"
+      },
+      {
+       "icon": "sprayBottle",
+       "label": "spray"
+      },
+      {
+       "icon": "clippers",
+       "label": "clippers"
+      }
+     ],
+     "area": [140, 110, 720, 610]
+    }
+   ],
+   "text": {
+    "std": "The stylist can show me the tools: a comb, scissors, a spray bottle, and clippers.",
+    "easy": "The stylist can show me the tools."
+   },
+   "alt": "Four picture cards: a comb, scissors, a spray bottle and clippers."
+  },
+  {
+   "id": "p15",
+   "layers": [
+    { "type": "bg", "id": "salon" },
+    { "type": "prop", "id": "salonChair", "at": [ 480, 700 ], "hideWhen": "wheelchair" },
+    { "type": "child", "pose": "sit", "at": [ 480, 590 ], "wheelchairAt": [ 480, 700 ], "wear": "cape" },
+    { "type": "adult", "who": "stylist", "pose": "point", "at": [ 760, 700 ], "flip": true },
+    { "type": "prop", "id": "mist", "at": [ 545, 330 ] },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "sprayBottle"
+      }
+     ],
+     "area": [60, 300, 180, 180]
+    }
+   ],
+   "text": {
+    "std": "The spray bottle makes my hair damp. The mist may feel cool.",
+    "easy": "Water mist may feel cool."
+   },
+   "alt": "The stylist sprays a little water mist near {child}."
+  },
+  {
+   "id": "p16",
+   "layers": [
+    { "type": "bg", "id": "salon" },
+    { "type": "prop", "id": "salonChair", "at": [ 480, 700 ], "hideWhen": "wheelchair" },
+    { "type": "child", "pose": "sit", "at": [ 480, 590 ], "wheelchairAt": [ 480, 700 ], "wear": "cape" },
+    { "type": "adult", "who": "stylist", "pose": "point", "at": [ 750, 700 ], "flip": true },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "comb"
+      }
+     ],
+     "area": [60, 300, 180, 180]
+    }
+   ],
+   "text": {
+    "std": "The comb moves through my hair. It may tug a little.",
+    "easy": "The comb may tug a little."
+   },
+   "alt": "The stylist combs hair for {child}. A card shows a comb."
+  },
+  {
+   "id": "p17",
+   "layers": [
+    { "type": "bg", "id": "salon" },
+    { "type": "prop", "id": "salonChair", "at": [ 480, 700 ], "hideWhen": "wheelchair" },
+    { "type": "child", "pose": "sit", "at": [ 480, 590 ], "wheelchairAt": [ 480, 700 ], "wear": "cape" },
+    { "type": "prop", "id": "hairBits", "at": [ 480, 730 ] },
+    { "type": "adult", "who": "stylist", "pose": "point", "at": [ 750, 700 ], "flip": true },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "scissors"
+      }
+     ],
+     "area": [60, 300, 180, 180]
+    }
+   ],
+   "text": {
+    "std": "Scissors go snip, snip. Little bits of hair fall down.",
+    "easy": "Scissors go snip, snip."
+   },
+   "alt": "Little bits of hair fall to the floor while {child} sits in the cape."
+  },
+  {
+   "id": "p18",
+   "layers": [
+    { "type": "bg", "id": "salon" },
+    { "type": "prop", "id": "salonChair", "at": [ 480, 700 ], "hideWhen": "wheelchair" },
+    { "type": "child", "pose": "sit", "at": [ 480, 590 ], "wheelchairAt": [ 480, 700 ], "wear": "cape" },
+    { "type": "prop", "id": "soundMarks", "at": [ 590, 300 ] },
+    { "type": "adult", "who": "stylist", "pose": "point", "at": [ 760, 700 ], "flip": true },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "clippers"
+      }
+     ],
+     "area": [60, 300, 180, 180]
+    }
+   ],
+   "text": {
+    "std": "The stylist may use clippers. They buzz and hum. I can ask to hear them first.",
+    "easy": "Clippers buzz. I can ask to hear them first.",
+    "variants": [
+     {
+      "when": {
+       "support": "earDefenders"
+      },
+      "std": "The stylist may use clippers. They buzz and hum. I can ask to hear them first, and ask if I can keep my ear defenders on.",
+      "easy": "Clippers buzz. I can ask to keep my ear defenders on."
+     }
+    ]
+   },
+   "alt": "Sound marks show the clippers buzzing near {child}."
+  },
+  {
+   "id": "p19",
+   "layers": [
+    { "type": "bg", "id": "salon" },
+    { "type": "prop", "id": "salonChair", "at": [ 480, 700 ], "hideWhen": "wheelchair" },
+    { "type": "child", "pose": "sit", "at": [ 480, 590 ], "wheelchairAt": [ 480, 700 ], "wear": "cape" },
+    { "type": "prop", "id": "hairBits", "at": [ 480, 730 ] },
+    { "type": "adult", "who": "stylist", "pose": "stand", "at": [ 770, 700 ], "flip": true },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "softBrush"
+      }
+     ],
+     "area": [60, 300, 180, 180]
+    }
+   ],
+   "text": {
+    "std": "Hair may land on my neck or face. It can feel itchy. A soft brush or towel wipes it away.",
+    "easy": "Hair can feel itchy. A soft brush wipes it away."
+   },
+   "alt": "A card shows a soft brush for wiping away loose hair."
+  },
+  {
+   "id": "p20",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "plain",
+     "params": {
+      "tone": "#f1dfc0"
+     }
+    },
+    { "type": "child", "pose": "handUp", "at": [ 320, 720 ], "scale": 1.5 },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "hand",
+       "label": "break"
+      }
+     ],
+     "area": [590, 220, 320, 340]
+    }
+   ],
+   "text": {
+    "std": "If I need a break, I can raise my hand or say, “Break, please.”",
+    "easy": "I can ask for a break.",
+    "variants": [
+     {
+      "when": {
+       "support": "aac"
+      },
+      "std": "If I need a break, I can raise my hand or use my device to say, “Break, please.”",
+      "easy": "I can raise my hand or use my device."
+     }
+    ]
+   },
+   "alt": "{child} practices raising a hand next to a card that says break."
+  },
+  {
+   "id": "p21",
+   "layers": [
+    { "type": "bg", "id": "salon" },
+    { "type": "prop", "id": "toolCart", "at": [ 150, 700 ] },
+    { "type": "prop", "id": "salonChair", "at": [ 480, 700 ], "hideWhen": "wheelchair" },
+    { "type": "child", "pose": "sit", "at": [ 480, 590 ], "wheelchairAt": [ 480, 700 ], "wear": "cape" },
+    { "type": "adult", "who": "stylist", "pose": "stand", "at": [ 800, 700 ], "flip": true },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "cup"
+      },
+      {
+       "icon": "breath"
+      }
+     ],
+     "area": [640, 380, 300, 150]
+    }
+   ],
+   "text": {
+    "std": "During a break, the tools rest. I can take a breath or have a drink.",
+    "easy": "In a break, the tools rest."
+   },
+   "alt": "The tools rest on a cart while {child} takes a break."
+  },
+  {
+   "id": "p22",
+   "layers": [
+    { "type": "bg", "id": "salon" },
+    { "type": "prop", "id": "salonChair", "at": [ 480, 700 ], "hideWhen": "wheelchair" },
+    { "type": "child", "pose": "sit", "at": [ 480, 590 ], "wheelchairAt": [ 480, 700 ], "wear": "cape" },
+    { "type": "adult", "who": "stylist", "pose": "point", "at": [ 750, 700 ], "flip": true },
+    { "type": "prop", "id": "mirrorHeld", "at": [ 640, 520 ] }
+   ],
+   "text": {
+    "std": "The stylist holds up a mirror. I can look if I want to.",
+    "easy": "I can look in a mirror if I want."
+   },
+   "alt": "The stylist holds up a hand mirror for {child}."
+  },
+  {
+   "id": "p23",
+   "layers": [
+    { "type": "bg", "id": "salon" },
+    { "type": "prop", "id": "salonChair", "at": [ 250, 700 ] },
+    { "type": "child", "pose": "wave", "at": [ 520, 700 ] },
+    { "type": "adult", "who": "stylist", "pose": "wave", "at": [ 760, 700 ], "flip": true }
+   ],
+   "text": {
+    "std": "The cape comes off. We say goodbye.",
+    "easy": "The cape comes off. Goodbye!"
+   },
+   "alt": "{child} and the stylist wave goodbye."
+  },
+  {
+   "id": "p24",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "plain",
+     "params": {
+      "tone": "#f4e4c9"
+     }
+    },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "star"
+      },
+      {
+       "icon": "scissors"
+      },
+      {
+       "icon": "heart"
+      }
+     ],
+     "area": [270, 70, 460, 150]
+    },
+    { "type": "child", "pose": "wave", "at": [ 500, 730 ], "scale": 1.45 }
+   ],
+   "text": {
+    "std": "Now I know what I might see, hear, and feel at a haircut.",
+    "easy": "Now I know about haircuts."
+   },
+   "alt": "{child} waves under a star, scissors and a heart. The end."
+  }
+ ]
+}

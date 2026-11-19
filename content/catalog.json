@@ -1,0 +1,13 @@
+{
+  "schema": "nub-catalog/1",
+  "titles": ["my-first-dentist-visit", "my-first-haircut"],
+  "concepts": [
+    { "id": "school", "title": "My First Day of School", "image": "nub-school-card.jpg", "note": "Coming next" },
+    { "id": "airplane", "title": "My First Airplane Ride", "image": "nub-airplane-card.jpg", "note": "Coming next" }
+  ],
+  "partners": {
+    "demo-dental": { "name": "Demo Kids Dental (fictional)", "type": "dentist", "fictional": true },
+    "demo-salon": { "name": "Demo Family Salon (fictional)", "type": "salon", "fictional": true },
+    "demo-school": { "name": "Demo Elementary PTA (fictional)", "type": "school", "fictional": true }
+  }
+}

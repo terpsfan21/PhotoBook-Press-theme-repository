@@ -1,0 +1,748 @@
+{
+ "schema": "nub-title/1",
+ "id": "dentist",
+ "code": "dentist",
+ "handle": "my-first-dentist-visit",
+ "title": "My First Dentist Visit",
+ "short": "Dentist",
+ "storyVersion": "1.0.0-draft",
+ "copyStatus": "draft-unreviewed",
+ "status": "prototype",
+ "cardImage": "nub-dentist-card.jpg",
+ "blurb": "Arrive, meet the team, see the chair and the light, hear about the tools, and practice a pause signal.",
+ "interiorPageCount": 24,
+ "variants": [
+  {
+   "id": 51000000101,
+   "binding": "softcover",
+   "sku": "NUB-DENT-SC-85"
+  },
+  {
+   "id": 51000000102,
+   "binding": "hardcover",
+   "sku": "NUB-DENT-HC-85"
+  }
+ ],
+ "video": null,
+ "availability": {
+  "supports": {
+   "glasses": true,
+   "hearingAids": true,
+   "earDefenders": true,
+   "aac": true
+  },
+  "mobility": {
+   "none": true,
+   "wheelchair": true,
+   "walker": false
+  },
+  "comfort": {
+   "none": true,
+   "bunny": true,
+   "bear": true
+  }
+ },
+ "cast": {
+  "caregiver": {
+   "inherit": [
+    "skin",
+    "hairColor"
+   ],
+   "hairStyle": "wavy",
+   "eyes": "brown",
+   "outfit": "sweater"
+  },
+  "dentist": {
+   "skin": "s2",
+   "hairStyle": "bob",
+   "hairColor": "black",
+   "eyes": "brown",
+   "outfit": "coat"
+  },
+  "helper": {
+   "skin": "s5",
+   "hairStyle": "crop",
+   "hairColor": "black",
+   "eyes": "brown",
+   "outfit": "scrubs"
+  },
+  "desk": {
+   "skin": "s1",
+   "hairStyle": "wavy",
+   "hairColor": "red",
+   "eyes": "green",
+   "outfit": "desk",
+   "supports": [
+    "glasses"
+   ]
+  }
+ },
+ "cover": {
+  "front": {
+   "id": "cover-front",
+   "style": "cover",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "plain",
+     "params": {
+      "tone": "#a9c9c4"
+     }
+    },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "tooth"
+      }
+     ],
+     "area": [690, 470, 210, 210]
+    },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "toothbrush"
+      }
+     ],
+     "area": [100, 470, 210, 210]
+    },
+    { "type": "child", "pose": "wave", "at": [ 500, 930 ], "scale": 1.45 }
+   ],
+   "text": {
+    "title": "My First Dentist Visit",
+    "std": "A story for {name}",
+    "easy": "A story for {name}",
+    "noName": {
+     "std": "A little story for a big first",
+     "easy": "A little story for a big first"
+    }
+   },
+   "alt": "{child} waves on the cover, between a smiling tooth and a toothbrush."
+  },
+  "back": {
+   "id": "cover-back",
+   "style": "back",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "plain",
+     "params": {
+      "tone": "#a9c9c4"
+     }
+    },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "star"
+      },
+      {
+       "icon": "tooth"
+      },
+      {
+       "icon": "heart"
+      }
+     ],
+     "area": [300, 610, 400, 130]
+    }
+   ],
+   "text": {
+    "title": "For the grown-up reading along",
+    "std": "{Name} can read this book before {their} visit, as many times as {they} {v:likes|like}. Real visits differ. Ask the dental office what {name} will see, and tell them about the pause signal.",
+    "easy": "{Name} can read this book before {their} visit, as many times as {they} {v:likes|like}. Real visits differ. Ask the dental office what {name} will see, and tell them about the pause signal.",
+    "variants": [
+     {
+      "when": {
+       "pronouns": "none"
+      },
+      "std": "Read this book together before the visit, as many times as you like. Real visits differ. Ask the dental office what to expect, and tell them about the pause signal.",
+      "easy": "Read this book together before the visit, as many times as you like. Real visits differ. Ask the dental office what to expect, and tell them about the pause signal."
+     }
+    ]
+   },
+   "alt": "Back cover with a note for the grown-up."
+  }
+ },
+ "pages": [
+  {
+   "id": "p01",
+   "style": "title",
+   "layers": [
+    { "type": "bg", "id": "plain" },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "tooth"
+      }
+     ],
+     "area": [90, 430, 200, 200]
+    },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "toothbrush"
+      }
+     ],
+     "area": [710, 430, 200, 200]
+    },
+    { "type": "child", "pose": "wave", "at": [ 500, 930 ], "scale": 1.4 }
+   ],
+   "text": {
+    "title": "My First Dentist Visit",
+    "std": "A story for {name}",
+    "easy": "A story for {name}",
+    "noName": {
+     "std": "A story about a first visit",
+     "easy": "A story about a first visit"
+    }
+   },
+   "alt": "Title page. {child} waves hello."
+  },
+  {
+   "id": "p02",
+   "layers": [
+    { "type": "bg", "id": "home" },
+    { "type": "child", "pose": "wave", "at": [ 400, 700 ] }
+   ],
+   "text": {
+    "std": "My name is {name}. Soon I will visit the dentist.",
+    "easy": "I am {name}. I will visit the dentist.",
+    "noName": {
+     "std": "Soon I will visit the dentist.",
+     "easy": "I will visit the dentist."
+    }
+   },
+   "alt": "{child} stands at home near a calendar with one day circled."
+  },
+  {
+   "id": "p03",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "plain",
+     "params": {
+      "tone": "#cfe0d8"
+     }
+    },
+    { "type": "adult", "who": "dentist", "pose": "wave", "at": [ 250, 720 ] },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "tooth"
+      },
+      {
+       "icon": "toothbrush"
+      }
+     ],
+     "area": [470, 220, 440, 380]
+    }
+   ],
+   "text": {
+    "std": "A dentist helps people take care of their teeth.",
+    "easy": "A dentist helps with teeth."
+   },
+   "alt": "A dentist in a white coat waves beside pictures of a tooth and a toothbrush."
+  },
+  {
+   "id": "p04",
+   "layers": [
+    { "type": "bg", "id": "home" },
+    { "type": "adult", "who": "caregiver", "pose": "stand", "at": [ 330, 700 ] },
+    { "type": "child", "pose": "holdHand", "at": [ 520, 700 ] }
+   ],
+   "text": {
+    "std": "A grown-up I know will come with me.",
+    "easy": "My grown-up comes with me."
+   },
+   "alt": "{child} stands beside a grown-up at home."
+  },
+  {
+   "id": "p05",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "outside",
+     "params": {
+      "kind": "dental"
+     }
+    },
+    { "type": "adult", "who": "caregiver", "pose": "stand", "at": [ 170, 740 ] },
+    { "type": "child", "pose": "point", "at": [ 310, 740 ] }
+   ],
+   "text": {
+    "std": "We go to the dental office. It may be a building I have not seen before.",
+    "easy": "We go to the dental office."
+   },
+   "alt": "{child} and a grown-up arrive outside the dental office. {child} points to the door."
+  },
+  {
+   "id": "p06",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "waiting",
+     "params": {
+      "kind": "dental"
+     }
+    },
+    { "type": "adult", "who": "caregiver", "pose": "stand", "at": [ 330, 700 ] },
+    { "type": "child", "pose": "stand", "at": [ 490, 700 ] }
+   ],
+   "text": {
+    "std": "Inside, there is a waiting room. There may be chairs, books, or toys.",
+    "easy": "Inside is a waiting room."
+   },
+   "alt": "{child} and a grown-up stand in a waiting room with chairs and a bookshelf."
+  },
+  {
+   "id": "p07",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "waiting",
+     "params": {
+      "kind": "dental",
+      "noShelf": true
+     }
+    },
+    { "type": "adult", "who": "desk", "pose": "wave", "at": [ 810, 690 ], "flip": true },
+    { "type": "prop", "id": "desk", "at": [ 810, 700 ] },
+    { "type": "adult", "who": "caregiver", "pose": "stand", "at": [ 360, 700 ] },
+    { "type": "child", "pose": "wave", "at": [ 520, 700 ] }
+   ],
+   "text": {
+    "std": "We tell the person at the desk that we are here.",
+    "easy": "We say we are here."
+   },
+   "alt": "{child} waves to a person behind the front desk."
+  },
+  {
+   "id": "p08",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "waiting",
+     "params": {
+      "kind": "dental"
+     }
+    },
+    {
+     "type": "prop",
+     "id": "smallChair",
+     "at": [300, 700],
+     "scale": 1.6,
+     "params": {
+      "color": "#d98a6a"
+     }
+    },
+    { "type": "adult", "who": "caregiver", "pose": "sit", "at": [ 300, 700 ] },
+    { "type": "prop", "id": "smallChair", "at": [ 520, 700 ], "hideWhen": "wheelchair" },
+    { "type": "child", "pose": "sit", "at": [ 520, 700 ] }
+   ],
+   "text": {
+    "std": "I might wait for a little while. I can bring something that helps me wait.",
+    "easy": "I might wait a little."
+   },
+   "alt": "{child} sits in the waiting room next to a grown-up."
+  },
+  {
+   "id": "p09",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "waiting",
+     "params": {
+      "kind": "dental"
+     }
+    },
+    { "type": "adult", "who": "caregiver", "pose": "stand", "at": [ 280, 700 ] },
+    { "type": "child", "pose": "stand", "at": [ 440, 700 ] },
+    { "type": "adult", "who": "helper", "pose": "wave", "at": [ 700, 700 ], "flip": true }
+   ],
+   "text": {
+    "std": "Someone from the dental team says my name. It is my turn.",
+    "easy": "Someone says my name. It is my turn.",
+    "noName": {
+     "std": "Someone from the dental team calls for me. It is my turn.",
+     "easy": "Someone calls for me. It is my turn."
+    }
+   },
+   "alt": "A dental team member in scrubs waves to {child}."
+  },
+  {
+   "id": "p10",
+   "layers": [
+    { "type": "bg", "id": "dentistRoom" },
+    { "type": "prop", "id": "lamp", "at": [ 330, 200 ] },
+    { "type": "prop", "id": "examChair", "at": [ 330, 700 ] },
+    { "type": "child", "pose": "stand", "at": [ 570, 700 ] },
+    { "type": "adult", "who": "helper", "pose": "point", "at": [ 770, 700 ], "flip": true }
+   ],
+   "text": {
+    "std": "We walk to a room with a big chair.",
+    "easy": "We go to a room with a big chair."
+   },
+   "alt": "{child} looks at a big dental chair. A team member points to it."
+  },
+  {
+   "id": "p11",
+   "layers": [
+    { "type": "bg", "id": "dentistRoom" },
+    { "type": "prop", "id": "lamp", "at": [ 400, 170 ] },
+    { "type": "prop", "id": "examChair", "at": [ 400, 700 ], "hideWhen": "wheelchair" },
+    { "type": "child", "pose": "sit", "at": [ 400, 610 ], "wear": "bib", "wheelchairAt": [ 400, 700 ] },
+    { "type": "adult", "who": "caregiver", "pose": "stand", "at": [ 720, 700 ], "flip": true }
+   ],
+   "text": {
+    "std": "The chair can lean back. I can sit in it, and my grown-up can stay close.",
+    "easy": "I can sit in the big chair. My grown-up stays close.",
+    "variants": [
+     {
+      "when": {
+       "mobility": "wheelchair"
+      },
+      "std": "The big chair can lean back. The team and my grown-up help me find a way to sit that works for me.",
+      "easy": "We find a way to sit that works for me."
+     }
+    ]
+   },
+   "alt": "{child} is seated for the visit. A grown-up stands close by."
+  },
+  {
+   "id": "p12",
+   "layers": [
+    { "type": "bg", "id": "dentistRoom" },
+    { "type": "prop", "id": "examChair", "at": [ 400, 700 ], "hideWhen": "wheelchair" },
+    { "type": "child", "pose": "sit", "at": [ 400, 610 ], "wear": "bib", "wheelchairAt": [ 400, 700 ] },
+    {
+     "type": "prop",
+     "id": "lamp",
+     "at": [400, 190],
+     "params": {
+      "on": true
+     }
+    }
+   ],
+   "text": {
+    "std": "There is a bright light above the chair. It helps the dentist see my teeth. I can close my eyes if it feels too bright.",
+    "easy": "There is a bright light. I can close my eyes."
+   },
+   "alt": "A lamp shines a soft yellow light over {child}."
+  },
+  {
+   "id": "p13",
+   "layers": [
+    { "type": "bg", "id": "dentistRoom" },
+    { "type": "prop", "id": "lamp", "at": [ 400, 170 ] },
+    { "type": "prop", "id": "examChair", "at": [ 400, 700 ], "hideWhen": "wheelchair" },
+    { "type": "child", "pose": "sitWave", "at": [ 400, 610 ], "wear": "bib", "wheelchairAt": [ 400, 700 ] },
+    { "type": "adult", "who": "dentist", "pose": "wave", "at": [ 730, 700 ], "flip": true, "mask": true, "gloves": true }
+   ],
+   "text": {
+    "std": "The dentist says hello. The dentist may wear a mask and gloves.",
+    "easy": "The dentist says hello."
+   },
+   "alt": "The dentist, wearing a mask and gloves, waves hello to {child}."
+  },
+  {
+   "id": "p14",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "plain",
+     "params": {
+      "tone": "#cfe0d8"
+     }
+    },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "mirror",
+       "label": "mirror"
+      },
+      {
+       "icon": "counter",
+       "label": "counter"
+      },
+      {
+       "icon": "polisher",
+       "label": "polisher"
+      },
+      {
+       "icon": "waterSpray",
+       "label": "water"
+      }
+     ],
+     "area": [140, 110, 720, 610]
+    }
+   ],
+   "text": {
+    "std": "The dentist has small tools. I can ask to see them first.",
+    "easy": "The dentist has tools. I can ask to see them."
+   },
+   "alt": "Four picture cards: a small mirror, a tooth counter, a polisher and a water sprayer."
+  },
+  {
+   "id": "p15",
+   "layers": [
+    { "type": "bg", "id": "dentistRoom" },
+    {
+     "type": "prop",
+     "id": "lamp",
+     "at": [400, 190],
+     "params": {
+      "on": true
+     }
+    },
+    { "type": "prop", "id": "examChair", "at": [ 400, 700 ], "hideWhen": "wheelchair" },
+    { "type": "child", "pose": "sit", "at": [ 400, 610 ], "wear": "bib", "wheelchairAt": [ 400, 700 ], "mouth": "open" },
+    { "type": "adult", "who": "dentist", "pose": "point", "at": [ 700, 700 ], "flip": true, "gloves": true },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "mirror"
+      }
+     ],
+     "area": [760, 150, 170, 170]
+    }
+   ],
+   "text": {
+    "std": "A tiny mirror helps the dentist look at my teeth.",
+    "easy": "A tiny mirror helps the dentist see."
+   },
+   "alt": "{child} opens wide while the dentist looks. A card shows a tiny mirror."
+  },
+  {
+   "id": "p16",
+   "layers": [
+    { "type": "bg", "id": "plain" },
+    { "type": "child", "pose": "sit", "at": [ 290, 720 ], "scale": 1.5, "mouth": "open" },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "tooth",
+       "label": "1"
+      },
+      {
+       "icon": "tooth",
+       "label": "2"
+      },
+      {
+       "icon": "tooth",
+       "label": "3"
+      }
+     ],
+     "area": [500, 240, 440, 300]
+    }
+   ],
+   "text": {
+    "std": "The dentist may count my teeth. One, two, three.",
+    "easy": "The dentist may count my teeth."
+   },
+   "alt": "{child} opens wide next to three tooth cards numbered one, two and three."
+  },
+  {
+   "id": "p17",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "plain",
+     "params": {
+      "tone": "#f1dfc0"
+     }
+    },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "polisher",
+       "label": "buzz"
+      },
+      {
+       "icon": "sound",
+       "label": "hum"
+      },
+      {
+       "icon": "waterSpray",
+       "label": "spray"
+      }
+     ],
+     "area": [90, 200, 820, 420]
+    }
+   ],
+   "text": {
+    "std": "Some tools make sounds. One may buzz or hum. One may spray a little water.",
+    "easy": "Some tools make sounds. One may spray water."
+   },
+   "alt": "Three picture cards: a buzzing polisher, a sound symbol and a water sprayer."
+  },
+  {
+   "id": "p18",
+   "layers": [
+    { "type": "bg", "id": "dentistRoom" },
+    { "type": "prop", "id": "lamp", "at": [ 400, 170 ] },
+    { "type": "prop", "id": "examChair", "at": [ 400, 700 ], "hideWhen": "wheelchair" },
+    { "type": "child", "pose": "sit", "at": [ 400, 610 ], "wear": "bib", "wheelchairAt": [ 400, 700 ] },
+    { "type": "adult", "who": "helper", "pose": "point", "at": [ 710, 700 ], "flip": true, "gloves": true },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "straw"
+      }
+     ],
+     "area": [760, 150, 170, 170]
+    }
+   ],
+   "text": {
+    "std": "A small straw may slurp the water away. It can sound funny.",
+    "easy": "A small straw slurps the water."
+   },
+   "alt": "A team member stands beside {child}. A card shows a small suction straw."
+  },
+  {
+   "id": "p19",
+   "layers": [
+    { "type": "bg", "id": "dentistRoom" },
+    { "type": "prop", "id": "lamp", "at": [ 400, 170 ] },
+    { "type": "prop", "id": "examChair", "at": [ 400, 700 ], "hideWhen": "wheelchair" },
+    { "type": "child", "pose": "sitHandUp", "at": [ 400, 610 ], "wear": "bib", "wheelchairAt": [ 400, 700 ] },
+    { "type": "adult", "who": "dentist", "pose": "stand", "at": [ 740, 700 ], "flip": true, "gloves": true }
+   ],
+   "text": {
+    "std": "If I need a pause, I can raise my hand.",
+    "easy": "I can raise my hand for a pause.",
+    "variants": [
+     {
+      "when": {
+       "support": "aac"
+      },
+      "std": "If I need a pause, I can raise my hand or use my device.",
+      "easy": "I can raise my hand or use my device."
+     }
+    ]
+   },
+   "alt": "{child} raises a hand. The dentist waits."
+  },
+  {
+   "id": "p20",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "plain",
+     "params": {
+      "tone": "#f1dfc0"
+     }
+    },
+    { "type": "child", "pose": "handUp", "at": [ 320, 720 ], "scale": 1.5 },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "hand",
+       "label": "pause"
+      }
+     ],
+     "area": [590, 220, 320, 340]
+    }
+   ],
+   "text": {
+    "std": "My grown-up and I can tell the dentist about my signal before we start. Let’s practice now.",
+    "easy": "We tell the dentist my signal. Let’s practice."
+   },
+   "alt": "{child} practices raising a hand next to a card that says pause."
+  },
+  {
+   "id": "p21",
+   "layers": [
+    { "type": "bg", "id": "dentistRoom" },
+    { "type": "prop", "id": "lamp", "at": [ 400, 170 ] },
+    { "type": "prop", "id": "examChair", "at": [ 400, 700 ], "hideWhen": "wheelchair" },
+    { "type": "child", "pose": "sitPoint", "at": [ 400, 610 ], "wear": "bib", "wheelchairAt": [ 400, 700 ] },
+    { "type": "adult", "who": "dentist", "pose": "wave", "at": [ 740, 700 ], "flip": true, "gloves": true },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "question"
+      }
+     ],
+     "area": [760, 150, 170, 170]
+    }
+   ],
+   "text": {
+    "std": "I can ask a question at any time. I can ask, “What is that?”",
+    "easy": "I can ask a question."
+   },
+   "alt": "{child} points and asks a question. A card shows a question mark."
+  },
+  {
+   "id": "p22",
+   "layers": [
+    { "type": "bg", "id": "dentistRoom" },
+    { "type": "prop", "id": "lamp", "at": [ 300, 170 ] },
+    { "type": "prop", "id": "examChair", "at": [ 300, 700 ] },
+    { "type": "child", "pose": "wave", "at": [ 540, 700 ] },
+    { "type": "adult", "who": "dentist", "pose": "wave", "at": [ 760, 700 ], "flip": true }
+   ],
+   "text": {
+    "std": "When the dentist is finished, the visit is over.",
+    "easy": "Then the visit is over."
+   },
+   "alt": "{child} and the dentist wave goodbye in the dental room."
+  },
+  {
+   "id": "p23",
+   "layers": [
+    {
+     "type": "bg",
+     "id": "outside",
+     "params": {
+      "kind": "dental"
+     }
+    },
+    { "type": "adult", "who": "caregiver", "pose": "stand", "at": [ 600, 740 ] },
+    { "type": "child", "pose": "wave", "at": [ 760, 740 ] }
+   ],
+   "text": {
+    "std": "We say goodbye. Then my grown-up and I go home.",
+    "easy": "We say goodbye and go home."
+   },
+   "alt": "{child} waves goodbye outside the dental office."
+  },
+  {
+   "id": "p24",
+   "layers": [
+    { "type": "bg", "id": "plain" },
+    {
+     "type": "icons",
+     "items": [
+      {
+       "icon": "star"
+      },
+      {
+       "icon": "tooth"
+      },
+      {
+       "icon": "heart"
+      }
+     ],
+     "area": [270, 70, 460, 150]
+    },
+    { "type": "child", "pose": "wave", "at": [ 500, 730 ], "scale": 1.45 }
+   ],
+   "text": {
+    "std": "Now I know what I might see, hear, and do at the dentist.",
+    "easy": "Now I know about the dentist."
+   },
+   "alt": "{child} waves under a star, a tooth and a heart. The end."
+  }
+ ]
+}

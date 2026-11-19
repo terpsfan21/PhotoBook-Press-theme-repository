@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Next Up Books — development prototype</title>
+  <link rel="stylesheet" href="/book.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="devbar" role="note">Development prototype · sample data · test checkout only · nothing here is live</div>
+  <header class="site">
+    <a class="logo" href="#/">Next Up <span>Books</span></a>
+    <nav aria-label="Main">
+      <a href="#/">Stories</a>
+      <a href="#/cart" id="cart-link">Cart (0)</a>
+      <a href="#/ops" class="dev-link">Review queue</a>
+      <a href="#/content" class="dev-link">Content status</a>
+    </nav>
+  </header>
+  <main id="main" tabindex="-1"></main>
+  <div id="live" class="sr" aria-live="polite"></div>
+  <footer class="site">
+    <p>For grown-ups: this is a picture book that helps a child see what a first experience might be like. It is not medical or therapeutic advice.</p>
+    <p>Next Up Books · printed by Linemark · prototype build, not for publication</p>
+  </footer>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
