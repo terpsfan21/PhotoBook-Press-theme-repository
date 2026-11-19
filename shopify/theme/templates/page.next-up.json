@@ -1,4 +1,5 @@
 {
+  "layout": "nub",
   "sections": {
     "main": {
       "type": "nub-editor",

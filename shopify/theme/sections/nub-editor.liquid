@@ -19,6 +19,10 @@
   <div id="main" tabindex="-1"></div>
   <div id="live" class="sr" aria-live="polite"></div>
   <noscript><p>The book editor needs JavaScript.</p></noscript>
+  <footer class="site">
+    <p>{{ section.settings.footer_note | escape }}</p>
+    <p>{{ section.settings.footer_line | escape }}</p>
+  </footer>
 </div>
 
 {%- assign dentist = section.settings.dentist_product -%}
@@ -50,6 +54,18 @@
       "id": "notice",
       "label": "Notice bar",
       "default": "Draft for testing. Placeholder art. Not for sale."
+    },
+    {
+      "type": "text",
+      "id": "footer_note",
+      "label": "Footer note",
+      "default": "For grown-ups: this is a picture book that helps a child see what a first experience might be like. It is not medical or therapeutic advice."
+    },
+    {
+      "type": "text",
+      "id": "footer_line",
+      "label": "Footer line",
+      "default": "Next Up Books. Printed by Linemark. Draft, not for publication."
     },
     {
       "type": "product",

@@ -10,6 +10,7 @@ What was added to that theme:
 | Theme file | Source in this repo |
 |---|---|
 | `sections/nub-editor.liquid` | `shopify/theme/sections/nub-editor.liquid` |
+| `layout/nub.liquid` (standalone page: no PhotoBook Press header, footer or styles) | `shopify/theme/layout/nub.liquid` |
 | `templates/page.next-up.json` | `shopify/theme/templates/page.next-up.json` |
 | `assets/nub-storefront.js` | `shopify/dist/nub-storefront.js` (built by `node shopify/build.mjs`, needs esbuild) |
 | `assets/nub-*-card.jpg`, `assets/nub-fixture-*` | `content/` |

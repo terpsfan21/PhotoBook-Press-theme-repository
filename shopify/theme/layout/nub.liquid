@@ -1,0 +1,21 @@
+{%- comment -%}
+  Standalone layout for the Next Up Books draft. It deliberately leaves out the
+  store's header, footer, fonts and styles so the page shows Next Up Books' own
+  look. Used only by templates/page.next-up.json.
+{%- endcomment -%}
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Next Up Books (draft)</title>
+    {{ content_for_header }}
+    <style>
+      html, body { margin: 0; background: #f7efdd; }
+    </style>
+  </head>
+  <body>
+    {{ content_for_layout }}
+  </body>
+</html>
