@@ -4,6 +4,7 @@
  "code": "haircut",
  "handle": "my-first-haircut",
  "title": "My First Haircut",
+ "edition": "Earlier layered version",
  "short": "Haircut",
  "storyVersion": "1.0.0-draft",
  "copyStatus": "draft-unreviewed",

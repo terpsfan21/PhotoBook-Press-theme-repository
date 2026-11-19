@@ -2,7 +2,8 @@
 // Journey: choose a story → make the character → preview every page →
 // choose softcover or hardcover → cart → test checkout → order + proof.
 import { registerCatalog, TITLES, CONCEPTS, PARTNERS, ASSETS, OPTIONS, BINDINGS, CONFIG, DEFAULT_CHARACTER, NAME_MAX, variantFor, money } from '../shared/catalog.js';
-import { resolveBook, renderArt, pageHTML, fingerprintSource, normalizeCharacter, validateName, validateDesign, resolveText, fillTokens, esc } from '../shared/render.js';
+import { activeProfile, missingProfileArt,
+  resolveBook, renderArt, pageHTML, fingerprintSource, normalizeCharacter, validateName, validateDesign, resolveText, fillTokens, esc } from '../shared/render.js';
 import * as shop from './shop.js';
 import { renderCharacter, SKIN, HAIR_COLOR, EYES, OUTFITS } from '../shared/character.js';
 
@@ -75,14 +76,30 @@ function characterForm(t) {
   const c = state.character;
   const av = t.availability;
   if (t.fixedCharacter) {
+    const profiles = t.profiles || [];
+    const cur = activeProfile(t, c);
+    const supportIds = Object.keys(t.supportPages || {}).filter((id) => t.supportPages[id].length);
+    const portrait = (id) => (ASSETS.files[`nub-profile-${id}`] ? `<img src="${esc(ASSETS.files[`nub-profile-${id}`].url)}" alt="">` : '<span class="noportrait" aria-hidden="true">Portrait to come</span>');
     return `<form id="char" novalidate>
-    <fieldset><legend>About the child</legend>
+    ${profiles.length ? `<fieldset><legend>Choose the child closest to yours</legend>
+      <div class="profiles">${profiles.map((x) => `<label class="profile"><input type="radio" name="profile" value="${x.id}" ${cur === x.id ? 'checked' : ''}><span class="box">${portrait(x.id)}<strong>${esc(x.label)}</strong><small>${esc(x.description || '')}</small></span></label>`).join('')}</div>
+    </fieldset>` : ''}
+    <fieldset><legend>Name</legend>
       <label class="field" for="name">First name or nickname <span class="muted">(optional)</span></label>
       <p class="hint" id="name-hint">Shown on the cover and in the story. Up to ${NAME_MAX} characters.</p>
       <input type="text" id="name" name="name" value="${esc(c.name)}" maxlength="${NAME_MAX + 6}" autocomplete="off" aria-describedby="name-hint name-error">
       <p class="error" id="name-error" role="alert"></p>
     </fieldset>
-    <p class="note"><strong>Painted sample.</strong> In this edition the child is painted into every picture, so the look cannot be changed here. Only the name is personalized.</p>
+    ${supportIds.length ? `<fieldset><legend>Things that help <span class="muted">(optional)</span></legend>
+      <p class="hint">Shown in the scenes where your child would use them.</p>
+      <div class="choices">${supportIds.map((id) => {
+        const label = OPTIONS.supports.find((o) => o.id === id)?.label || id;
+        const next = c.supports.includes(id) ? c.supports : [...c.supports, id];
+        const ready = missingProfileArt(t, cur, next, true).length === 0;
+        return `<label class="choice"><input type="checkbox" name="supports" value="${id}" ${c.supports.includes(id) ? 'checked' : ''} ${ready || c.supports.includes(id) ? '' : 'disabled'}><span>${optIcon('supports', id)}${esc(label)}${ready ? '' : ' — art to come for this child'}</span></label>`;
+      }).join('')}</div>
+    </fieldset>` : ''}
+    <p class="note">In this edition the child is painted into every picture. Pages marked \u201cPlaceholder art\u201d are still waiting for this child\u2019s painting and show a stand-in.</p>
   </form>`;
   }
   return `
@@ -186,7 +203,8 @@ function viewMake(titleId) {
   // Drop choices this title cannot draw, and say so.
   const c = state.character;
   const dropped = [];
-  c.supports = c.supports.filter((s) => t.availability.supports[s] || (dropped.push(s), false));
+  if (!t.profiles?.length) c.supports = c.supports.filter((s) => t.availability.supports[s] || (dropped.push(s), false));
+  if (t.profiles?.length) { c.profile = activeProfile(t, c); const keepS = c.supports.filter((x) => (t.supportPages?.[x] || []).length); c.supports = missingProfileArt(t, c.profile, keepS, true).length ? [] : keepS; dropped.length = 0; }
   if (!t.availability.mobility[c.mobility]) { dropped.push(c.mobility); c.mobility = 'none'; }
   if (!t.availability.comfort[c.comfort]) { dropped.push(c.comfort); c.comfort = 'none'; }
 
@@ -237,6 +255,7 @@ function viewMake(titleId) {
     if (el.name === 'binding') { state.binding = el.value; draw(`[name="binding"][value="${el.value}"]`); return; }
     if (!el.form || el.form.id !== 'char') return;
     if (el.name === 'supports') state.character.supports = [...el.form.querySelectorAll('[name="supports"]:checked')].map((x) => x.value);
+    if (t.fixedCharacter && (el.name === 'profile' || el.name === 'supports')) { if (el.name === 'profile') state.character.profile = el.value; state.seenAll = false; draw(`[name="${el.name}"][value="${el.value}"]`); return; }
     else if (el.name !== 'name') state.character[el.name] = el.value;
     state.seenAll = false;
     keep();

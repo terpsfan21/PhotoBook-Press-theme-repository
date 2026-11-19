@@ -45,7 +45,8 @@ Screenshots of each step are in `docs/screenshots/`.
 |---|---|
 | `docs/SITE_AND_JOURNEY.md` | Site map, the customer journey stage by stage, what is real and what is faked, and the questions that need an owner or Linemark answer |
 | `docs/ASSET_SPEC.md` | File formats and naming for stories, page art, character layers, covers and videos, so new titles drop in without rebuilding the editor |
-| `docs/ART_BRIEF_FULL.md` | The full art list for the creative side: character layers, page backgrounds for both books, and website artwork |
+| `docs/ART_BRIEF_FULL.md` | (Earlier layered approach, superseded by painted profiles.) The full art list for the creative side: character layers, page backgrounds for both books, and website artwork |
+| `docs/TWO_SCENE_TEST.md` | **Current direction.** File and naming requirements for the painted-profile test: two child profiles across two dentist scenes |
 | `docs/PHOTO_SHOOT.md` | Shot list and file names for photos and video of the printed books; each replaces a mockup on the site |
 | `docs/LAUNCH_PLAN.md` | Parent-focused launch plan: channel comparison, outreach messages, budget, results to track |
 | `docs/BUSINESS_PLAN.md` | Pricing and margins for both bindings, launch titles, demand tests, video add-on test |

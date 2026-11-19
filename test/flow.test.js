@@ -183,3 +183,35 @@ test('refund cancels unreleased jobs; release works once; proofs need the owner 
   assert.equal(rec.status, 'cancelled');
   assert.throws(() => s.release(rec.key), /cannot be released/);
 });
+
+test('painted profiles: art is chosen by profile and scene-specific support, with labeled stand-ins', async () => {
+  const { ASSETS } = await import('../shared/catalog.js');
+  const { profileArtName, missingProfileArt, renderArt, normalizeCharacter: norm } = await import('../shared/render.js');
+  const t = TITLES.dentistp;
+  assert.ok(t.profiles.length >= 2 && t.supportPages.earDefenders.includes('p16'));
+  assert.equal(profileArtName(t, 'p16', 'c2', ['earDefenders', 'glasses']), 'nub-dentist-c2-p16-bg-earDefenders');
+  assert.equal(profileArtName(t, 'p05', 'c2', ['earDefenders']), 'nub-dentist-c2-p05-bg', 'supports only change the scenes they appear in');
+  const added = ['nub-dentist-c1-p05-bg', 'nub-dentist-c1-p16-bg', 'nub-dentist-c1-p16-bg-earDefenders', 'nub-dentist-c2-p05-bg', 'nub-dentist-c2-p16-bg'];
+  for (const n of added) ASSETS.files[n] = { url: `/x/${n}.jpg`, w: 2625, h: 2625 };
+  try {
+    const page = (id) => t.pages.find((p) => p.id === id);
+    const c1 = norm({ name: 'Ren', profile: 'c1', supports: ['earDefenders'] });
+    const a = renderArt(t, page('p16'), c1);
+    assert.ok(a.svg.includes('/x/nub-dentist-c1-p16-bg-earDefenders.jpg') && !a.placeholder);
+    const b = renderArt(t, page('p05'), norm({ profile: 'c2' }));
+    assert.ok(b.svg.includes('/x/nub-dentist-c2-p05-bg.jpg') && !b.placeholder);
+    const stand = renderArt(t, page('p07'), norm({ profile: 'c2' }));
+    assert.ok(stand.placeholder && stand.svg.includes('nub-dentistp-p07-bg'), 'missing profile art shows the shared stand-in, labeled');
+    assert.deepEqual(missingProfileArt(t, 'c1', ['earDefenders'], true), []);
+    assert.deepEqual(missingProfileArt(t, 'c2', ['earDefenders'], true), ['p16'], 'support not painted for child 2 yet');
+    const v = variantFor('dentistp', 'softcover').id;
+    assert.equal(validateDesign({ titleId: 'dentistp', character: { profile: 'c1', supports: ['earDefenders'] }, variantId: v }).length, 0);
+    assert.ok(validateDesign({ titleId: 'dentistp', character: { profile: 'c2', supports: ['earDefenders'] }, variantId: v }).some((e) => e.field === 'supports'));
+    assert.ok(validateDesign({ titleId: 'dentistp', character: { profile: 'zz' }, variantId: v }).some((e) => e.field === 'profile'));
+    const book = resolveBook({ titleId: 'dentistp', character: { name: 'Ren', profile: 'c1', supports: ['earDefenders'] } });
+    assert.match(book.pages[15].body, /ear defenders/);
+    assert.match(book.cover.front.body, /Ren/);
+    const other = resolveBook({ titleId: 'dentistp', character: { name: 'Ren', profile: 'c2' } });
+    assert.notEqual(fingerprintSource(book, v), fingerprintSource(other, v), 'profile and support are part of what is frozen for print');
+  } finally { for (const n of added) delete ASSETS.files[n]; }
+});

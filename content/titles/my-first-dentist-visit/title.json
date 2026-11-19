@@ -4,6 +4,7 @@
  "code": "dentist",
  "handle": "my-first-dentist-visit",
  "title": "My First Dentist Visit",
+ "edition": "Earlier layered version",
  "short": "Dentist",
  "storyVersion": "1.0.0-draft",
  "copyStatus": "draft-unreviewed",

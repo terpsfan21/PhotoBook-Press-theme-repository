@@ -29,6 +29,16 @@ for (const t of c.titles.filter((x) => x.status !== 'fixture')) {
     else if (f.w < PAGE_PX) problems.push(`${f.rel}: ${f.w}px is below ${PAGE_PX}px (8.75 in at 300 ppi incl. bleed)`);
   }
   known.add(`nub-${t.code}-card`);
+  for (const pr of t.profiles || []) {
+    known.add(`nub-profile-${pr.id}`);
+    const base = slots.filter((id) => id !== 'cover-back');
+    const got = base.filter((id) => files[`nub-${t.artCode || t.code}-${pr.id}-${id}-bg`]);
+    for (const id of base) known.add(`nub-${t.artCode || t.code}-${pr.id}-${id}-bg`);
+    const sup = [];
+    for (const [s, pages] of Object.entries(t.supportPages || {})) for (const id of pages) { const n = `nub-${t.artCode || t.code}-${pr.id}-${id}-bg-${s}`; known.add(n); sup.push(`${id} ${s}: ${files[n] ? 'yes' : 'missing'}`); }
+    for (const n of Object.keys(files)) if (n.startsWith(`nub-${t.artCode || t.code}-${pr.id}-`)) { known.add(n); const f = files[n]; if (f.w !== f.h) problems.push(`${f.rel}: must be square, is ${f.w}×${f.h}`); else if (f.w < PAGE_PX) lowres.add(`${t.title} / ${pr.id}`); }
+    console.log(`  ${pr.label} (${pr.id}): portrait ${files[`nub-profile-${pr.id}`] ? 'yes' : 'missing'}; painted pages ${got.length}/${base.length}${got.length ? ` (${got.join(' ')})` : ''}; supports → ${sup.join(', ') || 'none'}`);
+  }
   if (t.pages.length !== t.interiorPageCount) problems.push(`${t.handle}: interiorPageCount says ${t.interiorPageCount} but there are ${t.pages.length} pages`);
   if (t.pages.length < CONFIG.pageCountRange[0] || t.pages.length > CONFIG.pageCountRange[1]) problems.push(`${t.handle}: ${t.pages.length} pages is outside ${CONFIG.pageCountRange.join('–')}`);
   for (const p of t.pages) {
@@ -52,7 +62,7 @@ for (const pose of poses) {
 console.log(`Character layers: ${charHave}/${charNeed} required files across ${poses.length} poses (missing layers fall back to placeholder drawings)`);
 for (const [name, f] of Object.entries(files)) {
   if (name.startsWith('nub-char-v1-')) { if (f.w !== 1500 || f.h !== 2250) problems.push(`${f.rel}: character layers must be 1500×2250, is ${f.w}×${f.h}`); }
-  else if (name.startsWith('nub-') && !known.has(name) && !/^nub-(fixture|site|social|guide|partner|logo)(-|$)/.test(name) && !/-card$/.test(name)) problems.push(`${f.rel}: name does not match any page or layer — check the spelling`);
+  else if (name.startsWith('nub-') && !known.has(name) && !/^nub-(fixture|site|social|guide|partner|logo|profile)(-|$)/.test(name) && !/-card$/.test(name)) problems.push(`${f.rel}: name does not match any page or layer — check the spelling`);
 }
 for (const name of lowres) console.log(`Note: "${name}" is marked as a screen sample; its pictures are far below print size.`);
 console.log(problems.length ? `\n${problems.length} problem(s):\n - ${problems.join('\n - ')}` : '\nNo problems found.');

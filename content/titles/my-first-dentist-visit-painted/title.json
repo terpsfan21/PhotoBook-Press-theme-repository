@@ -5,7 +5,7 @@
  "handle": "my-first-dentist-visit-painted",
  "title": "My First Dentist Visit",
  "short": "Dentist (painted)",
- "edition": "Painted sample",
+ "edition": "Painted preview",
  "storyVersion": "sample-2",
  "copyStatus": "sample-unreviewed",
  "status": "prototype",
@@ -13,7 +13,7 @@
  "look": "band",
  "fixedCharacter": true,
  "cardImage": "nub-dentistp-card.jpg",
- "blurb": "A fully painted sample of the dentist story. The child is part of each picture, so only the name changes.",
+ "blurb": "A fully painted dentist story. Choose the child closest to yours and add their name.",
  "interiorPageCount": 24,
  "variants": [
   {
@@ -225,7 +225,16 @@
    "layers": [],
    "text": {
     "std": "A little tube can slurp up water. The dentist shows me how it sounds.",
-    "easy": "A little tube can slurp up water. The dentist shows me how it sounds."
+    "easy": "A little tube can slurp up water. The dentist shows me how it sounds.",
+    "variants": [
+     {
+      "when": {
+       "support": "earDefenders"
+      },
+      "std": "A little tube can slurp up water. I wear my ear defenders while the dentist shows me how it sounds.",
+      "easy": "A little tube can slurp up water. I wear my ear defenders."
+     }
+    ]
    },
    "alt": "Illustration: A little tube can slurp up water. The dentist shows me how it sounds."
   },
@@ -301,5 +310,23 @@
    },
    "alt": "Illustration: Fern and I did something new today."
   }
- ]
+ ],
+ "profiles": [
+  {
+   "id": "c1",
+   "label": "Child 1",
+   "description": "Description to come with the art"
+  },
+  {
+   "id": "c2",
+   "label": "Child 2",
+   "description": "Description to come with the art"
+  }
+ ],
+ "supportPages": {
+  "earDefenders": [
+   "p16"
+  ]
+ },
+ "artCode": "dentist"
 }

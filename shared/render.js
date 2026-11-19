@@ -26,6 +26,7 @@ export function normalizeCharacter(input = {}) {
     supports: [...new Set(c.supports || [])].filter((s) => known.includes(s)).sort(),
     mobility: c.mobility || 'none',
     comfort: c.comfort || 'none',
+    profile: c.profile || '',
   };
 }
 
@@ -49,7 +50,13 @@ export function validateDesign(input) {
   for (const key of ['pronouns', 'ageBand', 'skin', 'hairStyle', 'hairColor', 'eyes', 'outfit', 'mobility', 'comfort']) {
     if (!OPTIONS[key].some((o) => o.id === c[key])) add(key, `Choose one of the listed ${key} options.`);
   }
-  for (const s of c.supports) if (!m.availability.supports[s]) add('supports', `"${s}" is not available in ${m.title} yet.`);
+  if (m.profiles?.length) {
+    if (!m.profiles.some((x) => x.id === c.profile)) add('profile', 'Choose one of the children for this book.');
+    for (const s of c.supports) if (!(m.supportPages?.[s] || []).length) add('supports', `"${s}" is not available in ${m.title} yet.`);
+    if (c.supports.length && missingProfileArt(m, activeProfile(m, c), c.supports, true).length) add('supports', 'That combination is not painted for this child yet.');
+  } else {
+    for (const s of c.supports) if (!m.availability.supports[s]) add('supports', `"${s}" is not available in ${m.title} yet.`);
+  }
   if (!m.availability.mobility[c.mobility]) add('mobility', `That mobility aid does not have art in ${m.title} yet.`);
   if (!m.availability.comfort[c.comfort]) add('comfort', `That comfort item is not available in ${m.title} yet.`);
   if (!['std', 'easy'].includes(input.textSetting || 'std')) add('textSetting', 'Unknown text setting.');
@@ -115,6 +122,38 @@ function castMember(manifest, who, c) {
   return preset;
 }
 
+// ---- painted profiles ------------------------------------------------------
+// A "profile" title is fully painted: the child is part of every picture and
+// the family picks one of a few painted children. Supports are scene-specific:
+// title.supportPages lists, per support, the pages where it is visible, and
+// each of those pages needs its own painted version.
+export const SUPPORT_ORDER = ['aac', 'earDefenders', 'glasses']; // fixed order used in file names
+
+/** File name (no extension) of the painted page for a profile and a set of supports. */
+export function profileArtName(manifest, pageId, profile, supports = []) {
+  const shown = SUPPORT_ORDER.filter((x) => supports.includes(x) && (manifest.supportPages?.[x] || []).includes(pageId));
+  // artCode lets a preview title use the final file names (e.g. "dentist") before it replaces the older title.
+  return `nub-${manifest.artCode || manifest.code}-${profile}-${pageId}-bg${shown.length ? `-${shown.join('-')}` : ''}`;
+}
+
+/** The profile a design uses for this title: the chosen one if valid, else the first. */
+export function activeProfile(manifest, c) {
+  const list = manifest.profiles || [];
+  if (!list.length) return '';
+  return list.some((x) => x.id === c.profile) ? c.profile : list[0].id;
+}
+
+/**
+ * Pages whose painted art is missing for this profile and set of supports.
+ * `onlySupportPages` limits the check to pages a support changes (used to
+ * decide whether a support can be offered while base pages are still arriving).
+ */
+export function missingProfileArt(manifest, profile, supports = [], onlySupportPages = false) {
+  const affected = new Set(supports.flatMap((x) => manifest.supportPages?.[x] || []));
+  const pages = [manifest.cover?.front, ...(manifest.pages || [])].filter(Boolean).map((pg) => pg.id);
+  return pages.filter((id) => (!onlySupportPages || affected.has(id)) && !ASSETS.files[profileArtName(manifest, id, profile, supports)]);
+}
+
 // ---- finished-art lookup -------------------------------------------------
 // ASSETS.files maps a file's base name (no extension) to { url, w, h }.
 const asset = (name) => ASSETS.files[name] || null;
@@ -151,10 +190,13 @@ export function renderArt(manifest, page, c, alt = '') {
   const band = AGE_BANDS[c.ageBand] || AGE_BANDS['6-7'];
   const inChair = c.mobility === 'wheelchair';
   const base = `nub-${manifest.code}-${page.id}`;
-  const bgFile = (inChair && asset(`${base}-bg-wheelchair`)) || asset(`${base}-bg`);
+  const profile = activeProfile(manifest, c);
+  const painted = profile ? asset(profileArtName(manifest, page.id, profile, c.supports)) : null;
+  const bgFile = painted || (inChair && asset(`${base}-bg-wheelchair`)) || asset(`${base}-bg`);
   const fgFile = asset(`${base}-fg`);
   const bleed = (CONFIG.bleedIn / CONFIG.trimIn) * 1000;
-  let placeholder = !bgFile;
+  // A profile page that falls back to shared art is a stand-in and is labeled.
+  let placeholder = !bgFile || Boolean(profile && !painted && page.id !== 'cover-back');
   let s = `<svg class="nub-art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" role="img" aria-label="${esc(alt)}" preserveAspectRatio="xMidYMid slice">`;
   // A finished background plate already contains the room, props and other
   // people, and is supplied with bleed; the preview shows the trimmed area.

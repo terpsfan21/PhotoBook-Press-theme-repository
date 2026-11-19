@@ -234,3 +234,13 @@ a.product:hover h3 { text-decoration: underline; }
   header.site { justify-content: space-between; }
   .photoband > div { position: static; width: auto; padding: 18px; }
 }
+
+/* painted profiles */
+.profiles { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+.profile { position: relative; }
+.profile input { position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.profile .box { display: flex; flex-direction: column; gap: 4px; height: 100%; padding: 8px; border: 3px solid var(--line); border-radius: var(--radius); background: #fff; text-align: center; }
+.profile img, .profile .noportrait { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 10px; background: #ead9b8; display: grid; place-items: center; font-size: .78rem; color: var(--muted); }
+.profile small { color: var(--muted); font-size: .8rem; }
+.profile input:checked + .box { border-color: var(--teal); box-shadow: 0 0 0 3px #2f656233; }
+.profile input:focus-visible + .box { outline: 3px solid var(--focus); outline-offset: 3px; }
