@@ -1,0 +1,73 @@
+{%- comment -%}
+  Next Up Books editor (DRAFT, for testing only).
+  Loads one self-contained script (assets/nub-storefront.js) that draws the
+  story picker, character editor, book preview and cover choice inside the
+  .nub-app box. Styles are scoped to .nub-app and do not affect the theme.
+  With no products chosen below, the cart is a stand-in and checkout is off.
+{%- endcomment -%}
+<div class="nub-app">
+  <a class="skip" href="#main">Skip to the book editor</a>
+  <div class="devbar" role="note">{{ section.settings.notice | escape }}</div>
+  <header class="site">
+    <a class="logo" href="#/">Next Up <span>Books</span></a>
+    <nav aria-label="Next Up Books">
+      <a href="#/">Stories</a>
+      <a href="#/cart" id="cart-link">Cart (0)</a>
+      <a href="#/content" class="dev-link">Content status</a>
+    </nav>
+  </header>
+  <div id="main" tabindex="-1"></div>
+  <div id="live" class="sr" aria-live="polite"></div>
+  <noscript><p>The book editor needs JavaScript.</p></noscript>
+</div>
+
+{%- assign dentist = section.settings.dentist_product -%}
+{%- assign haircut = section.settings.haircut_product -%}
+<script>
+  window.NUB_SHOPIFY = {
+    assets: {
+      "nub-dentist-card": { url: {{ 'nub-dentist-card.jpg' | asset_url | json }}, w: 766, h: 506 },
+      "nub-haircut-card": { url: {{ 'nub-haircut-card.jpg' | asset_url | json }}, w: 762, h: 506 },
+      "nub-school-card": { url: {{ 'nub-school-card.jpg' | asset_url | json }}, w: 766, h: 506 },
+      "nub-airplane-card": { url: {{ 'nub-airplane-card.jpg' | asset_url | json }}, w: 762, h: 506 },
+      "nub-fixture-p01-bg": { url: {{ 'nub-fixture-p01-bg.jpg' | asset_url | json }}, w: 1536, h: 1024 },
+      "nub-fixture-child-full": { url: {{ 'nub-fixture-child-full.png' | asset_url | json }}, w: 512, h: 768 }
+    },
+    variants: {
+      dentist: { {%- if dentist != blank -%}{%- for v in dentist.variants -%}{%- assign t = v.title | downcase -%}{%- if t contains 'soft' -%}softcover: {{ v.id }}, {%- endif -%}{%- if t contains 'hard' -%}hardcover: {{ v.id }}, {%- endif -%}{%- endfor -%}{%- endif -%} },
+      haircut: { {%- if haircut != blank -%}{%- for v in haircut.variants -%}{%- assign t = v.title | downcase -%}{%- if t contains 'soft' -%}softcover: {{ v.id }}, {%- endif -%}{%- if t contains 'hard' -%}hardcover: {{ v.id }}, {%- endif -%}{%- endfor -%}{%- endif -%} }
+    }
+  };
+</script>
+<script type="module" src="{{ 'nub-storefront.js' | asset_url }}"></script>
+
+{% schema %}
+{
+  "name": "Next Up Books editor",
+  "settings": [
+    {
+      "type": "text",
+      "id": "notice",
+      "label": "Notice bar",
+      "default": "Draft for testing. Placeholder art. Not for sale."
+    },
+    {
+      "type": "product",
+      "id": "dentist_product",
+      "label": "Dentist book product",
+      "info": "Needs one variant named Softcover and one named Hardcover. Leave empty to keep the cart as a stand-in."
+    },
+    {
+      "type": "product",
+      "id": "haircut_product",
+      "label": "Haircut book product",
+      "info": "Needs one variant named Softcover and one named Hardcover."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Next Up Books editor"
+    }
+  ]
+}
+{% endschema %}

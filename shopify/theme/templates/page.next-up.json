@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "main": {
+      "type": "nub-editor",
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}
