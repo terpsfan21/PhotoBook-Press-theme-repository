@@ -29,35 +29,6 @@
 {%- assign haircut = section.settings.haircut_product -%}
 <script>
   window.NUB_SHOPIFY = {
-    assets: {
-      "nub-char-v1-wave-acc-glasses": { url: {{ 'nub-char-v1-wave-acc-glasses.png' | asset_img_url: '750x' | json }}, w: 1500, h: 2250 },
-      "nub-char-v1-wave-body-s2": { url: {{ 'nub-char-v1-wave-body-s2.png' | asset_img_url: '750x' | json }}, w: 1500, h: 2250 },
-      "nub-char-v1-wave-body-s5": { url: {{ 'nub-char-v1-wave-body-s5.png' | asset_img_url: '750x' | json }}, w: 1500, h: 2250 },
-      "nub-char-v1-wave-hair-bob-black": { url: {{ 'nub-char-v1-wave-hair-bob-black.png' | asset_img_url: '750x' | json }}, w: 1500, h: 2250 },
-      "nub-char-v1-wave-hair-bob-brown": { url: {{ 'nub-char-v1-wave-hair-bob-brown.png' | asset_img_url: '750x' | json }}, w: 1500, h: 2250 },
-      "nub-char-v1-wave-hair-curls-black": { url: {{ 'nub-char-v1-wave-hair-curls-black.png' | asset_img_url: '750x' | json }}, w: 1500, h: 2250 },
-      "nub-char-v1-wave-hair-curls-brown": { url: {{ 'nub-char-v1-wave-hair-curls-brown.png' | asset_img_url: '750x' | json }}, w: 1500, h: 2250 },
-      "nub-char-v1-wave-outfit-cardigan": { url: {{ 'nub-char-v1-wave-outfit-cardigan.png' | asset_img_url: '750x' | json }}, w: 1500, h: 2250 },
-      "nub-char-v1-wave-outfit-flower": { url: {{ 'nub-char-v1-wave-outfit-flower.png' | asset_img_url: '750x' | json }}, w: 1500, h: 2250 },
-      "nub-dentist-cover-front-bg": { url: {{ 'nub-dentist-cover-front-bg.jpg' | asset_img_url: '1400x' | json }}, w: 2625, h: 2625 },
-      "nub-dentist-p02-bg": { url: {{ 'nub-dentist-p02-bg.jpg' | asset_img_url: '1400x' | json }}, w: 2625, h: 2625 },
-      "nub-dentist-p22-bg": { url: {{ 'nub-dentist-p22-bg.jpg' | asset_img_url: '1400x' | json }}, w: 2625, h: 2625 },
-      "nub-dentist-p23-bg": { url: {{ 'nub-dentist-p23-bg.jpg' | asset_img_url: '1400x' | json }}, w: 2625, h: 2625 },
-      "nub-dentist-cover-back-bg": { url: {{ 'nub-dentist-cover-back-bg.jpg' | asset_img_url: '1400x' | json }}, w: 2625, h: 2625 },
-      "nub-dentist-p01-bg": { url: {{ 'nub-dentist-p01-bg.jpg' | asset_img_url: '1400x' | json }}, w: 2625, h: 2625 },
-      "nub-dentist-p03-bg": { url: {{ 'nub-dentist-p03-bg.jpg' | asset_img_url: '1400x' | json }}, w: 2625, h: 2625 },
-      "nub-dentist-p14-bg": { url: {{ 'nub-dentist-p14-bg.jpg' | asset_img_url: '1400x' | json }}, w: 2625, h: 2625 },
-      "nub-dentist-p16-bg": { url: {{ 'nub-dentist-p16-bg.jpg' | asset_img_url: '1400x' | json }}, w: 2625, h: 2625 },
-      "nub-dentist-p17-bg": { url: {{ 'nub-dentist-p17-bg.jpg' | asset_img_url: '1400x' | json }}, w: 2625, h: 2625 },
-      "nub-dentist-p20-bg": { url: {{ 'nub-dentist-p20-bg.jpg' | asset_img_url: '1400x' | json }}, w: 2625, h: 2625 },
-      "nub-dentist-p24-bg": { url: {{ 'nub-dentist-p24-bg.jpg' | asset_img_url: '1400x' | json }}, w: 2625, h: 2625 },
-      "nub-dentist-card": { url: {{ 'nub-dentist-card.jpg' | asset_url | json }}, w: 766, h: 506 },
-      "nub-haircut-card": { url: {{ 'nub-haircut-card.jpg' | asset_url | json }}, w: 762, h: 506 },
-      "nub-school-card": { url: {{ 'nub-school-card.jpg' | asset_url | json }}, w: 766, h: 506 },
-      "nub-airplane-card": { url: {{ 'nub-airplane-card.jpg' | asset_url | json }}, w: 762, h: 506 },
-      "nub-fixture-p01-bg": { url: {{ 'nub-fixture-p01-bg.jpg' | asset_url | json }}, w: 1536, h: 1024 },
-      "nub-fixture-child-full": { url: {{ 'nub-fixture-child-full.png' | asset_url | json }}, w: 512, h: 768 }
-    },
     variants: {
       dentist: { {%- if dentist != blank -%}{%- for v in dentist.variants -%}{%- assign t = v.title | downcase -%}{%- if t contains 'soft' -%}softcover: {{ v.id }}, {%- endif -%}{%- if t contains 'hard' -%}hardcover: {{ v.id }}, {%- endif -%}{%- endfor -%}{%- endif -%} },
       haircut: { {%- if haircut != blank -%}{%- for v in haircut.variants -%}{%- assign t = v.title | downcase -%}{%- if t contains 'soft' -%}softcover: {{ v.id }}, {%- endif -%}{%- if t contains 'hard' -%}hardcover: {{ v.id }}, {%- endif -%}{%- endfor -%}{%- endif -%} }

@@ -1,0 +1,287 @@
+{
+ "nub-logo-light": {
+  "file": "nub-logo-light.svg",
+  "w": 0,
+  "h": 0
+ },
+ "nub-logo-mark": {
+  "file": "nub-logo-mark.svg",
+  "w": 0,
+  "h": 0
+ },
+ "nub-logo": {
+  "file": "nub-logo.svg",
+  "w": 0,
+  "h": 0
+ },
+ "nub-char-v1-wave-acc-glasses": {
+  "file": "nub-char-v1-wave-acc-glasses.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-body-s2": {
+  "file": "nub-char-v1-wave-body-s2.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-body-s5": {
+  "file": "nub-char-v1-wave-body-s5.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-hair-bob-black": {
+  "file": "nub-char-v1-wave-hair-bob-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-hair-bob-brown": {
+  "file": "nub-char-v1-wave-hair-bob-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-hair-curls-black": {
+  "file": "nub-char-v1-wave-hair-curls-black.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-hair-curls-brown": {
+  "file": "nub-char-v1-wave-hair-curls-brown.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-outfit-cardigan": {
+  "file": "nub-char-v1-wave-outfit-cardigan.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-char-v1-wave-outfit-flower": {
+  "file": "nub-char-v1-wave-outfit-flower.png",
+  "w": 1500,
+  "h": 2250
+ },
+ "nub-airplane-card": {
+  "file": "nub-airplane-card.jpg",
+  "w": 1500,
+  "h": 1000
+ },
+ "nub-school-card": {
+  "file": "nub-school-card.jpg",
+  "w": 1500,
+  "h": 1000
+ },
+ "nub-fixture-child-full": {
+  "file": "nub-fixture-child-full.png",
+  "w": 512,
+  "h": 768
+ },
+ "nub-fixture-p01-bg": {
+  "file": "nub-fixture-p01-bg.jpg",
+  "w": 1536,
+  "h": 1024
+ },
+ "nub-site-about": {
+  "file": "nub-site-about.jpg",
+  "w": 1600,
+  "h": 1000
+ },
+ "nub-site-bindings": {
+  "file": "nub-site-bindings.jpg",
+  "w": 2000,
+  "h": 1200
+ },
+ "nub-site-spread-dentist": {
+  "file": "nub-site-spread-dentist.jpg",
+  "w": 2400,
+  "h": 1200
+ },
+ "nub-site-empty": {
+  "file": "nub-site-empty.png",
+  "w": 800,
+  "h": 800
+ },
+ "nub-site-hero-desktop": {
+  "file": "nub-site-hero-desktop.jpg",
+  "w": 2400,
+  "h": 1100
+ },
+ "nub-site-hero-mobile": {
+  "file": "nub-site-hero-mobile.jpg",
+  "w": 1080,
+  "h": 1350
+ },
+ "nub-site-icon": {
+  "file": "nub-site-icon.png",
+  "w": 512,
+  "h": 512
+ },
+ "nub-site-opt-aac": {
+  "file": "nub-site-opt-aac.png",
+  "w": 400,
+  "h": 400
+ },
+ "nub-site-opt-bear": {
+  "file": "nub-site-opt-bear.png",
+  "w": 400,
+  "h": 400
+ },
+ "nub-site-opt-bunny": {
+  "file": "nub-site-opt-bunny.png",
+  "w": 400,
+  "h": 400
+ },
+ "nub-site-opt-earDefenders": {
+  "file": "nub-site-opt-earDefenders.png",
+  "w": 400,
+  "h": 400
+ },
+ "nub-site-opt-glasses": {
+  "file": "nub-site-opt-glasses.png",
+  "w": 400,
+  "h": 400
+ },
+ "nub-site-opt-hair-bob": {
+  "file": "nub-site-opt-hair-bob.png",
+  "w": 400,
+  "h": 400
+ },
+ "nub-site-opt-hair-curls": {
+  "file": "nub-site-opt-hair-curls.png",
+  "w": 400,
+  "h": 400
+ },
+ "nub-site-opt-hair-puffs": {
+  "file": "nub-site-opt-hair-puffs.png",
+  "w": 400,
+  "h": 400
+ },
+ "nub-site-opt-hair-short": {
+  "file": "nub-site-opt-hair-short.png",
+  "w": 400,
+  "h": 400
+ },
+ "nub-site-opt-hair-wavy": {
+  "file": "nub-site-opt-hair-wavy.png",
+  "w": 400,
+  "h": 400
+ },
+ "nub-site-opt-hearingAids": {
+  "file": "nub-site-opt-hearingAids.png",
+  "w": 400,
+  "h": 400
+ },
+ "nub-site-opt-outfit-cardigan": {
+  "file": "nub-site-opt-outfit-cardigan.png",
+  "w": 400,
+  "h": 400
+ },
+ "nub-site-opt-outfit-collar": {
+  "file": "nub-site-opt-outfit-collar.png",
+  "w": 400,
+  "h": 400
+ },
+ "nub-site-opt-outfit-flower": {
+  "file": "nub-site-opt-outfit-flower.png",
+  "w": 400,
+  "h": 400
+ },
+ "nub-site-opt-outfit-leaf": {
+  "file": "nub-site-opt-outfit-leaf.png",
+  "w": 400,
+  "h": 400
+ },
+ "nub-site-opt-outfit-pocket": {
+  "file": "nub-site-opt-outfit-pocket.png",
+  "w": 400,
+  "h": 400
+ },
+ "nub-site-opt-wheelchair": {
+  "file": "nub-site-opt-wheelchair.png",
+  "w": 400,
+  "h": 400
+ },
+ "nub-site-step-1": {
+  "file": "nub-site-step-1.png",
+  "w": 800,
+  "h": 800
+ },
+ "nub-site-step-2": {
+  "file": "nub-site-step-2.png",
+  "w": 800,
+  "h": 800
+ },
+ "nub-site-step-3": {
+  "file": "nub-site-step-3.png",
+  "w": 800,
+  "h": 800
+ },
+ "nub-dentist-card": {
+  "file": "nub-dentist-card.jpg",
+  "w": 1500,
+  "h": 1000
+ },
+ "nub-dentist-cover-back-bg": {
+  "file": "nub-dentist-cover-back-bg.jpg",
+  "w": 2625,
+  "h": 2625
+ },
+ "nub-dentist-cover-front-bg": {
+  "file": "nub-dentist-cover-front-bg.jpg",
+  "w": 2625,
+  "h": 2625
+ },
+ "nub-dentist-p01-bg": {
+  "file": "nub-dentist-p01-bg.jpg",
+  "w": 2625,
+  "h": 2625
+ },
+ "nub-dentist-p02-bg": {
+  "file": "nub-dentist-p02-bg.jpg",
+  "w": 2625,
+  "h": 2625
+ },
+ "nub-dentist-p03-bg": {
+  "file": "nub-dentist-p03-bg.jpg",
+  "w": 2625,
+  "h": 2625
+ },
+ "nub-dentist-p14-bg": {
+  "file": "nub-dentist-p14-bg.jpg",
+  "w": 2625,
+  "h": 2625
+ },
+ "nub-dentist-p16-bg": {
+  "file": "nub-dentist-p16-bg.jpg",
+  "w": 2625,
+  "h": 2625
+ },
+ "nub-dentist-p17-bg": {
+  "file": "nub-dentist-p17-bg.jpg",
+  "w": 2625,
+  "h": 2625
+ },
+ "nub-dentist-p20-bg": {
+  "file": "nub-dentist-p20-bg.jpg",
+  "w": 2625,
+  "h": 2625
+ },
+ "nub-dentist-p22-bg": {
+  "file": "nub-dentist-p22-bg.jpg",
+  "w": 2625,
+  "h": 2625
+ },
+ "nub-dentist-p23-bg": {
+  "file": "nub-dentist-p23-bg.jpg",
+  "w": 2625,
+  "h": 2625
+ },
+ "nub-dentist-p24-bg": {
+  "file": "nub-dentist-p24-bg.jpg",
+  "w": 2625,
+  "h": 2625
+ },
+ "nub-haircut-card": {
+  "file": "nub-haircut-card.jpg",
+  "w": 1500,
+  "h": 1000
+ }
+}

@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 
-const IMG = new Set(['.png', '.jpg', '.jpeg', '.webp']);
+const IMG = new Set(['.png', '.jpg', '.jpeg', '.webp', '.svg']);
 
 /** Pixel size of a PNG or JPEG without decoding it. */
 export function imageSize(file) {

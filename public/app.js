@@ -56,34 +56,46 @@ const cardUrl = (t) => ASSETS.files[(t.cardImage || '').replace(/\.\w+$/, '')]?.
 // ---- collection page ---------------------------------------------------------
 function viewHome() {
   const ref = PARTNERS[load('nub.ref', '')];
+  const F = ASSETS.files;
+  const heroD = F['nub-site-hero-desktop'];
+  const heroM = F['nub-site-hero-mobile'];
+  const step = (n) => (F[`nub-site-step-${n}`] ? `<img src="${esc(F[`nub-site-step-${n}`].url)}" alt="" width="96" height="96">` : '');
   main.innerHTML = `
-  <section class="hero">
-    <div>
+  <section class="hero ${heroD ? 'art' : ''}">
+    ${heroD ? `<picture><source media="(max-width: 700px)" srcset="${esc((heroM || heroD).url)}"><img src="${esc(heroD.url)}" alt="A child and a grown-up reading a picture book together on a sofa" width="2400" height="1100"></picture>` : ''}
+    <div class="hero-text">
       <h1>A little story for a big first.</h1>
-      <p class="lead">Put your child in an illustrated story about what they might see, hear, and do the first time. Make the character look like them, read the whole book on screen, then choose softcover or hardcover.</p>
+      <p class="lead">Put your child in an illustrated story about what they might see, hear, and do the first time.</p>
       ${ref ? `<p class="tag ok">Shared with you by ${esc(ref.name)}</p>` : ''}
       <p><a class="btn" href="#/make/${orderable()[0].id}">Make a book</a></p>
     </div>
-    <ol class="steps">
-      <li><h3>Choose a story</h3><span class="muted">Dentist or haircut to start.</span></li>
-      <li><h3>Make the character</h3><span class="muted">Name, look, and the things that help.</span></li>
-      <li><h3>Read every page first</h3><span class="muted">Then order an 8.5 × 8.5 in book.</span></li>
-    </ol>
   </section>
+  <ol class="steps ${F['nub-site-step-1'] ? 'pics' : ''}">
+    <li>${step(1)}<div><h3>Choose a story</h3><span class="muted">Dentist or haircut to start.</span></div></li>
+    <li>${step(2)}<div><h3>Make the character</h3><span class="muted">Name, look, and the things that help.</span></div></li>
+    <li>${step(3)}<div><h3>Read every page first</h3><span class="muted">Then order an 8.5 × 8.5 in softcover or hardcover.</span></div></li>
+  </ol>
   <h2>First Experiences</h2>
   <ul class="cards">
     ${orderable().map((t) => `<li class="card"><img src="${esc(cardUrl(t))}" alt="Concept illustration for ${esc(t.title)}"><div class="body"><h3>${esc(t.title)}</h3><p class="muted">${esc(t.blurb)}</p><p class="muted">${t.pages.length} story pages · softcover ${money(BINDINGS.softcover.priceCents)} · hardcover ${money(BINDINGS.hardcover.priceCents)}</p><a class="btn" href="#/make/${t.id}">Personalize <span class="sr">${esc(t.title)}</span></a></div></li>`).join('')}
     ${CONCEPTS.map((c) => `<li class="card soon"><img src="${esc(c.image || '')}" alt="Concept illustration for ${esc(c.title)}"><div class="body"><h3>${esc(c.title)}</h3><p><span class="tag">${esc(c.note)}</span></p></div></li>`).join('')}
   </ul>
-  <p class="note" style="margin-top:22px">Card images are concept art supplied for the prototype. Book pages use labeled placeholder drawings until finished illustrations are dropped into the content folder.</p>`;
+  <p class="note" style="margin-top:22px">Draft: pages without finished illustrations yet show labeled placeholder drawings.</p>`;
 }
 
 // ---- editor --------------------------------------------------------------------
 const swatch = { skin: SKIN, hairColor: HAIR_COLOR, eyes: EYES, outfit: Object.fromEntries(Object.entries(OUTFITS).map(([k, v]) => [k, v.top])) };
 
+// Small pictures for option buttons, when the art has been delivered.
+const optIcon = (key, id) => {
+  const name = { hairStyle: `nub-site-opt-hair-${id}`, outfit: `nub-site-opt-outfit-${id}` }[key] || `nub-site-opt-${id}`;
+  const f = ['hairStyle', 'outfit', 'comfort', 'mobility', 'supports'].includes(key) ? ASSETS.files[name] : null;
+  return f ? `<img class="ico" src="${esc(f.url)}" alt="" width="40" height="40">` : '';
+};
+
 function radios(key, legend, hint = '') {
   const cur = state.character[key];
-  return `<fieldset><legend>${legend}</legend>${hint ? `<p class="hint">${hint}</p>` : ''}<div class="choices">${OPTIONS[key].map((o) => `<label class="choice ${swatch[key] ? 'swatch' : ''}"><input type="radio" name="${key}" value="${o.id}" ${cur === o.id ? 'checked' : ''}><span>${swatch[key] ? `<i class="sw" style="background:${swatch[key][o.id]}"></i>` : ''}${esc(o.label)}</span></label>`).join('')}</div></fieldset>`;
+  return `<fieldset><legend>${legend}</legend>${hint ? `<p class="hint">${hint}</p>` : ''}<div class="choices">${OPTIONS[key].map((o) => `<label class="choice ${swatch[key] ? 'swatch' : ''}"><input type="radio" name="${key}" value="${o.id}" ${cur === o.id ? 'checked' : ''}><span>${optIcon(key, o.id) || (swatch[key] ? `<i class="sw" style="background:${swatch[key][o.id]}"></i>` : '')}${esc(o.label)}</span></label>`).join('')}</div></fieldset>`;
 }
 
 function characterForm(t) {
@@ -107,10 +119,10 @@ function characterForm(t) {
     ${radios('outfit', 'Outfit')}
     <fieldset><legend>Things that help <span class="muted">(optional)</span></legend>
       <p class="hint">Choose any that your child uses. They appear on every page.</p>
-      <div class="choices">${OPTIONS.supports.map((o) => `<label class="choice"><input type="checkbox" name="supports" value="${o.id}" ${c.supports.includes(o.id) ? 'checked' : ''} ${av.supports[o.id] ? '' : 'disabled'}><span>${esc(o.label)}</span></label>`).join('')}</div>
+      <div class="choices">${OPTIONS.supports.map((o) => `<label class="choice"><input type="checkbox" name="supports" value="${o.id}" ${c.supports.includes(o.id) ? 'checked' : ''} ${av.supports[o.id] ? '' : 'disabled'}><span>${optIcon('supports', o.id)}${esc(o.label)}</span></label>`).join('')}</div>
     </fieldset>
     <fieldset><legend>Mobility aid</legend>
-      <div class="choices">${OPTIONS.mobility.map((o) => `<label class="choice"><input type="radio" name="mobility" value="${o.id}" ${c.mobility === o.id ? 'checked' : ''} ${av.mobility[o.id] ? '' : 'disabled'}><span>${esc(o.label)}${av.mobility[o.id] ? '' : ' — art not ready yet'}</span></label>`).join('')}</div>
+      <div class="choices">${OPTIONS.mobility.map((o) => `<label class="choice"><input type="radio" name="mobility" value="${o.id}" ${c.mobility === o.id ? 'checked' : ''} ${av.mobility[o.id] ? '' : 'disabled'}><span>${optIcon('mobility', o.id)}${esc(o.label)}${av.mobility[o.id] ? '' : ' — art not ready yet'}</span></label>`).join('')}</div>
     </fieldset>
     ${radios('comfort', 'Comfort item')}
   </form>`;
@@ -264,7 +276,7 @@ function viewMake(titleId) {
 // ---- cart / checkout / order ------------------------------------------------------
 async function viewCart() {
   const cart = await refreshCart();
-  if (!cart.items.length) { main.innerHTML = '<h1>Your cart</h1><p>Your cart is empty.</p><p><a class="btn" href="#/">Choose a story</a></p>'; return; }
+  if (!cart.items.length) { const e = ASSETS.files['nub-site-empty']; main.innerHTML = `<h1>Your cart</h1>${e ? `<img src="${esc(e.url)}" alt="" width="180" height="180">` : ''}<p>Your cart is empty.</p><p><a class="btn" href="#/">Choose a story</a></p>`; return; }
   const bad = cart.items.some((i) => i.nub.problem);
   main.innerHTML = `<h1>Your cart</h1>
   <div class="scroll"><table><thead><tr><th scope="col">Book</th><th scope="col">Cover</th><th scope="col">Copies</th><th scope="col">Price</th><th scope="col"><span class="sr">Remove</span></th></tr></thead><tbody>
@@ -390,6 +402,8 @@ async function route() {
 const data = await backend.catalog();
 registerCatalog(data);
 state.problems = data.problems || [];
+const logoEl = document.querySelector('.nub-logo-slot, header.site .logo');
+if (logoEl && ASSETS.files['nub-logo'] && !logoEl.querySelector('img')) logoEl.innerHTML = `<img src="${esc(ASSETS.files['nub-logo'].url)}" alt="Next Up Books" style="display:block;height:40px;width:auto">`;
 const ref = new URLSearchParams(location.search).get('ref');
 if (ref && PARTNERS[ref]) { save('nub.ref', ref); await backend.setRef(ref); }
 window.addEventListener('hashchange', () => { if (!location.hash.startsWith('#/make')) state.step = 'character'; route(); });

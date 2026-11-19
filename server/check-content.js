@@ -50,7 +50,7 @@ for (const pose of poses) {
 console.log(`Character layers: ${charHave}/${charNeed} required files across ${poses.length} poses (missing layers fall back to placeholder drawings)`);
 for (const [name, f] of Object.entries(files)) {
   if (name.startsWith('nub-char-v1-')) { if (f.w !== 1500 || f.h !== 2250) problems.push(`${f.rel}: character layers must be 1500×2250, is ${f.w}×${f.h}`); }
-  else if (name.startsWith('nub-') && !known.has(name) && !name.startsWith('nub-fixture-') && !/-card$/.test(name)) problems.push(`${f.rel}: name does not match any page or layer — check the spelling`);
+  else if (name.startsWith('nub-') && !known.has(name) && !/^nub-(fixture|site|social|guide|partner|logo)(-|$)/.test(name) && !/-card$/.test(name)) problems.push(`${f.rel}: name does not match any page or layer — check the spelling`);
 }
 console.log(problems.length ? `\n${problems.length} problem(s):\n - ${problems.join('\n - ')}` : '\nNo problems found.');
 process.exitCode = problems.length ? 1 : 0;

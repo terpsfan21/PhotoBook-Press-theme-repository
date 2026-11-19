@@ -10,11 +10,21 @@ import dentist from '../../content/titles/my-first-dentist-visit/title.json';
 import haircut from '../../content/titles/my-first-haircut/title.json';
 import fixture from '../../content/fixtures/title.json';
 import catalog from '../../content/catalog.json';
+import assetIndex from './assets.gen.json';
 import { CONFIG, BINDINGS } from '../../shared/catalog.js';
 import { validateDesign, normalizeCharacter } from '../../shared/render.js';
 
 const cfg = window.NUB_SHOPIFY || {};
-const files = cfg.assets || {};
+// Art lives beside this script in the theme's assets folder. Large files are
+// requested at a smaller size for the screen (Shopify resizes on request).
+const sized = (file) => {
+  if (/-bg(-wheelchair)?\.jpe?g$/.test(file)) return file.replace(/\.(jpe?g)$/, '_1400x.$1');
+  if (/^nub-char-/.test(file)) return file.replace(/\.png$/, '_750x.png');
+  return file;
+};
+const files = {};
+for (const [name, f] of Object.entries(assetIndex)) files[name] = { url: new URL(sized(f.file), import.meta.url).href, w: f.w, h: f.h };
+Object.assign(files, cfg.assets || {});
 const variants = cfg.variants || {};
 const real = Object.values(variants).some((v) => v && v.softcover && v.hardcover);
 const titles = [dentist, haircut, fixture].map((t) => {
