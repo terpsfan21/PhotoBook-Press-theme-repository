@@ -94,6 +94,11 @@
   "w": 2400,
   "h": 1200
  },
+ "nub-social-square-3": {
+  "file": "nub-social-square-3.jpg",
+  "w": 1080,
+  "h": 1080
+ },
  "nub-site-empty": {
   "file": "nub-site-empty.png",
   "w": 800,

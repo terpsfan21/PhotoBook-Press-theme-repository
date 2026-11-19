@@ -10,7 +10,7 @@ const esbuild = createRequire(import.meta.url)(process.env.ESBUILD || 'esbuild')
 const { loadContent } = await import('../server/content.js');
 const index = {};
 for (const [name, f] of Object.entries(loadContent('content').assets.files)) {
-  if (/^nub-(guide|social|partner)-|^reference-/.test(name) || /email-header|site-share/.test(name)) continue; // marketing files are not used on the page
+  if ((/^nub-(guide|social|partner)-|^reference-/.test(name) && name !== 'nub-social-square-3') || /email-header|site-share/.test(name)) continue; // marketing files are not used on the page
   index[name] = { file: f.rel.split('/').pop(), w: f.w, h: f.h };
 }
 fs.writeFileSync('shopify/src/assets.gen.json', JSON.stringify(index, null, 1) + '\n');

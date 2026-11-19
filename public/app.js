@@ -3,6 +3,7 @@
 // choose softcover or hardcover → cart → test checkout → order + proof.
 import { registerCatalog, TITLES, CONCEPTS, PARTNERS, ASSETS, OPTIONS, BINDINGS, CONFIG, DEFAULT_CHARACTER, NAME_MAX, variantFor, money } from '../shared/catalog.js';
 import { resolveBook, renderArt, pageHTML, fingerprintSource, normalizeCharacter, validateName, validateDesign, resolveText, fillTokens, esc } from '../shared/render.js';
+import * as shop from './shop.js';
 import { renderCharacter, SKIN, HAIR_COLOR, EYES, OUTFITS } from '../shared/character.js';
 
 const main = document.getElementById('main');
@@ -53,35 +54,7 @@ async function sha256(text) {
 const orderable = () => Object.values(TITLES).filter((t) => t.status !== 'fixture');
 const cardUrl = (t) => ASSETS.files[(t.cardImage || '').replace(/\.\w+$/, '')]?.url || '';
 
-// ---- collection page ---------------------------------------------------------
-function viewHome() {
-  const ref = PARTNERS[load('nub.ref', '')];
-  const F = ASSETS.files;
-  const heroD = F['nub-site-hero-desktop'];
-  const heroM = F['nub-site-hero-mobile'];
-  const step = (n) => (F[`nub-site-step-${n}`] ? `<img src="${esc(F[`nub-site-step-${n}`].url)}" alt="" width="96" height="96">` : '');
-  main.innerHTML = `
-  <section class="hero ${heroD ? 'art' : ''}">
-    ${heroD ? `<picture><source media="(max-width: 700px)" srcset="${esc((heroM || heroD).url)}"><img src="${esc(heroD.url)}" alt="A child and a grown-up reading a picture book together on a sofa" width="2400" height="1100"></picture>` : ''}
-    <div class="hero-text">
-      <h1>A little story for a big first.</h1>
-      <p class="lead">Put your child in an illustrated story about what they might see, hear, and do the first time.</p>
-      ${ref ? `<p class="tag ok">Shared with you by ${esc(ref.name)}</p>` : ''}
-      <p><a class="btn" href="#/make/${orderable()[0].id}">Make a book</a></p>
-    </div>
-  </section>
-  <ol class="steps ${F['nub-site-step-1'] ? 'pics' : ''}">
-    <li>${step(1)}<div><h3>Choose a story</h3><span class="muted">Dentist or haircut to start.</span></div></li>
-    <li>${step(2)}<div><h3>Make the character</h3><span class="muted">Name, look, and the things that help.</span></div></li>
-    <li>${step(3)}<div><h3>Read every page first</h3><span class="muted">Then order an 8.5 × 8.5 in softcover or hardcover.</span></div></li>
-  </ol>
-  <h2>First Experiences</h2>
-  <ul class="cards">
-    ${orderable().map((t) => `<li class="card"><img src="${esc(cardUrl(t))}" alt="Concept illustration for ${esc(t.title)}"><div class="body"><h3>${esc(t.title)}</h3><p class="muted">${esc(t.blurb)}</p><p class="muted">${t.pages.length} story pages · softcover ${money(BINDINGS.softcover.priceCents)} · hardcover ${money(BINDINGS.hardcover.priceCents)}</p><a class="btn" href="#/make/${t.id}">Personalize <span class="sr">${esc(t.title)}</span></a></div></li>`).join('')}
-    ${CONCEPTS.map((c) => `<li class="card soon"><img src="${esc(c.image || '')}" alt="Concept illustration for ${esc(c.title)}"><div class="body"><h3>${esc(c.title)}</h3><p><span class="tag">${esc(c.note)}</span></p></div></li>`).join('')}
-  </ul>
-  <p class="note" style="margin-top:22px">Draft: pages without finished illustrations yet show labeled placeholder drawings.</p>`;
-}
+const shopCtx = { character: () => state.character, get ref() { return load('nub.ref', ''); } };
 
 // ---- editor --------------------------------------------------------------------
 const swatch = { skin: SKIN, hairColor: HAIR_COLOR, eyes: EYES, outfit: Object.fromEntries(Object.entries(OUTFITS).map(([k, v]) => [k, v.top])) };
@@ -198,7 +171,7 @@ function orderPanel(t, book) {
 
 function viewMake(titleId) {
   const t = TITLES[titleId];
-  if (!t || t.status === 'fixture') return viewHome();
+  if (!t || t.status === 'fixture') return shop.viewBooks(main, shopCtx);
   // Drop choices this title cannot draw, and say so.
   const c = state.character;
   const dropped = [];
@@ -276,7 +249,7 @@ function viewMake(titleId) {
 // ---- cart / checkout / order ------------------------------------------------------
 async function viewCart() {
   const cart = await refreshCart();
-  if (!cart.items.length) { const e = ASSETS.files['nub-site-empty']; main.innerHTML = `<h1>Your cart</h1>${e ? `<img src="${esc(e.url)}" alt="" width="180" height="180">` : ''}<p>Your cart is empty.</p><p><a class="btn" href="#/">Choose a story</a></p>`; return; }
+  if (!cart.items.length) { const e = ASSETS.files['nub-site-empty']; main.innerHTML = `<h1>Your cart</h1>${e ? `<img src="${esc(e.url)}" alt="" width="180" height="180">` : ''}<p>Your cart is empty.</p><p><a class="btn" href="#/books">Choose a story</a></p>`; return; }
   const bad = cart.items.some((i) => i.nub.problem);
   main.innerHTML = `<h1>Your cart</h1>
   <div class="scroll"><table><thead><tr><th scope="col">Book</th><th scope="col">Cover</th><th scope="col">Copies</th><th scope="col">Price</th><th scope="col"><span class="sr">Remove</span></th></tr></thead><tbody>
@@ -285,7 +258,7 @@ async function viewCart() {
     <td>${money(i.line_price)}</td><td><button class="btn small ghost" data-remove="${i.key}">Remove<span class="sr"> ${esc(i.title)}</span></button></td></tr>`).join('')}
   </tbody></table></div>
   <div class="totals"><div><span>Subtotal</span><span>${money(cart.total_price)}</span></div><div><span>Shipping (sample)</span><span>${money(CONFIG.sampleShippingCents)}</span></div><div class="grand"><span>Total</span><span>${money(cart.total_price + CONFIG.sampleShippingCents)}</span></div></div>
-  <div class="actions"><a class="btn ghost" href="#/">Add another book</a><a class="btn" href="${backend.features.testCheckout ? '#/checkout' : backend.checkoutUrl || '#/cart'}" ${bad || (!backend.features.testCheckout && !backend.checkoutUrl) ? 'aria-disabled="true" style="pointer-events:none;opacity:.55"' : ''}>${backend.features.testCheckout ? 'Checkout (test)' : 'Checkout'}</a></div>
+  <div class="actions"><a class="btn ghost" href="#/books">Add another book</a><a class="btn" href="${backend.features.testCheckout ? '#/checkout' : backend.checkoutUrl || '#/cart'}" ${bad || (!backend.features.testCheckout && !backend.checkoutUrl) ? 'aria-disabled="true" style="pointer-events:none;opacity:.55"' : ''}>${backend.features.testCheckout ? 'Checkout (test)' : 'Checkout'}</a></div>
   ${backend.features.simulated ? '<p class="note"><strong>Draft:</strong> the Next Up Books products are not active in this store yet, so this cart is a stand-in kept in your browser and checkout is switched off. Once test products are active, this becomes the store\u2019s real cart.</p>' : ''}
   <p class="note">The book design travels with each cart line as a hidden reference code only. Names and choices are never placed in the cart, the order, or analytics.</p>`;
   main.onclick = async (e) => { const k = e.target.closest('[data-remove]')?.dataset.remove; if (k) { await backend.changeQty(k, 0); say('Book removed'); viewCart(); } };
@@ -395,15 +368,17 @@ async function route() {
   else if (name === 'order' && backend.features.testCheckout) await viewOrder();
   else if (name === 'ops' && backend.features.ops) await viewOps();
   else if (name === 'content') viewContent();
-  else viewHome();
+  else if (name === 'books') (arg ? shop.viewBook(main, shopCtx, arg) : shop.viewBooks(main, shopCtx));
+  else if (['how', 'about', 'faq'].includes(name)) shop.viewInfo(main, shopCtx, name);
+  else shop.viewHome(main, shopCtx);
   if (name !== 'make') window.scrollTo(0, 0);
+  document.querySelectorAll('header.site nav a').forEach((a) => a.toggleAttribute('aria-current', Boolean(name) && a.getAttribute('href') === `#/${name}`));
 }
 
 const data = await backend.catalog();
 registerCatalog(data);
 state.problems = data.problems || [];
-const logoEl = document.querySelector('.nub-logo-slot, header.site .logo');
-if (logoEl && ASSETS.files['nub-logo'] && !logoEl.querySelector('img')) logoEl.innerHTML = `<img src="${esc(ASSETS.files['nub-logo'].url)}" alt="Next Up Books" style="display:block;height:40px;width:auto">`;
+shop.renderChrome(backend.features);
 const ref = new URLSearchParams(location.search).get('ref');
 if (ref && PARTNERS[ref]) { save('nub.ref', ref); await backend.setRef(ref); }
 window.addEventListener('hashchange', () => { if (!location.hash.startsWith('#/make')) state.step = 'character'; route(); });

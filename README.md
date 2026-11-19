@@ -26,7 +26,7 @@ npm run check:content
 
 ## Review it in ten minutes
 
-1. **Stories.** The home page shows the two launch titles and two "coming next" cards (your concept art).
+1. **Shop.** The home page, the Books page and each product page are planned around photos of the printed books; until those exist they show mockups tagged "Mockup".
 2. **Personalize the dentist book.** Enter a name, change skin, hair and outfit, add glasses or ear defenders, a comfort toy, or a wheelchair. The character updates as you go.
 3. **Preview the book.** Page through all 24 pages with the buttons or arrow keys. Try **All pages**, **Text only**, and **Easy to read**.
 4. **Cover and order.** Choose softcover or hardcover, tick the confirmation, add to cart.
@@ -46,6 +46,7 @@ Screenshots of each step are in `docs/screenshots/`.
 | `docs/SITE_AND_JOURNEY.md` | Site map, the customer journey stage by stage, what is real and what is faked, and the questions that need an owner or Linemark answer |
 | `docs/ASSET_SPEC.md` | File formats and naming for stories, page art, character layers, covers and videos, so new titles drop in without rebuilding the editor |
 | `docs/ART_BRIEF_FULL.md` | The full art list for the creative side: character layers, page backgrounds for both books, and website artwork |
+| `docs/PHOTO_SHOOT.md` | Shot list and file names for photos and video of the printed books; each replaces a mockup on the site |
 | `docs/LAUNCH_PLAN.md` | Parent-focused launch plan: channel comparison, outreach messages, budget, results to track |
 | `docs/BUSINESS_PLAN.md` | Pricing and margins for both bindings, launch titles, demand tests, video add-on test |
 | `docs/handoff/` | The original brief and artwork notes |
