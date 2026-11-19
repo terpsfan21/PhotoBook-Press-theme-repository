@@ -9,7 +9,7 @@
   <a class="skip" href="#main">Skip to the book editor</a>
   <div class="devbar" role="note">{{ section.settings.notice | escape }}</div>
   <header class="site">
-    <a class="logo" href="#/">Next Up <span>Books</span></a>
+    <a class="logo" href="#/"><img src="{{ 'nub-logo.svg' | asset_url }}" alt="Next Up Books" width="224" height="40" style="display:block;height:40px;width:auto"></a>
     <nav aria-label="Next Up Books">
       <a href="#/">Stories</a>
       <a href="#/cart" id="cart-link">Cart (0)</a>
@@ -30,6 +30,19 @@
 <script>
   window.NUB_SHOPIFY = {
     assets: {
+      "nub-char-v1-wave-acc-glasses": { url: {{ 'nub-char-v1-wave-acc-glasses.png' | asset_img_url: '750x' | json }}, w: 1500, h: 2250 },
+      "nub-char-v1-wave-body-s2": { url: {{ 'nub-char-v1-wave-body-s2.png' | asset_img_url: '750x' | json }}, w: 1500, h: 2250 },
+      "nub-char-v1-wave-body-s5": { url: {{ 'nub-char-v1-wave-body-s5.png' | asset_img_url: '750x' | json }}, w: 1500, h: 2250 },
+      "nub-char-v1-wave-hair-bob-black": { url: {{ 'nub-char-v1-wave-hair-bob-black.png' | asset_img_url: '750x' | json }}, w: 1500, h: 2250 },
+      "nub-char-v1-wave-hair-bob-brown": { url: {{ 'nub-char-v1-wave-hair-bob-brown.png' | asset_img_url: '750x' | json }}, w: 1500, h: 2250 },
+      "nub-char-v1-wave-hair-curls-black": { url: {{ 'nub-char-v1-wave-hair-curls-black.png' | asset_img_url: '750x' | json }}, w: 1500, h: 2250 },
+      "nub-char-v1-wave-hair-curls-brown": { url: {{ 'nub-char-v1-wave-hair-curls-brown.png' | asset_img_url: '750x' | json }}, w: 1500, h: 2250 },
+      "nub-char-v1-wave-outfit-cardigan": { url: {{ 'nub-char-v1-wave-outfit-cardigan.png' | asset_img_url: '750x' | json }}, w: 1500, h: 2250 },
+      "nub-char-v1-wave-outfit-flower": { url: {{ 'nub-char-v1-wave-outfit-flower.png' | asset_img_url: '750x' | json }}, w: 1500, h: 2250 },
+      "nub-dentist-cover-front-bg": { url: {{ 'nub-dentist-cover-front-bg.jpg' | asset_img_url: '1400x' | json }}, w: 2625, h: 2625 },
+      "nub-dentist-p02-bg": { url: {{ 'nub-dentist-p02-bg.jpg' | asset_img_url: '1400x' | json }}, w: 2625, h: 2625 },
+      "nub-dentist-p22-bg": { url: {{ 'nub-dentist-p22-bg.jpg' | asset_img_url: '1400x' | json }}, w: 2625, h: 2625 },
+      "nub-dentist-p23-bg": { url: {{ 'nub-dentist-p23-bg.jpg' | asset_img_url: '1400x' | json }}, w: 2625, h: 2625 },
       "nub-dentist-card": { url: {{ 'nub-dentist-card.jpg' | asset_url | json }}, w: 766, h: 506 },
       "nub-haircut-card": { url: {{ 'nub-haircut-card.jpg' | asset_url | json }}, w: 762, h: 506 },
       "nub-school-card": { url: {{ 'nub-school-card.jpg' | asset_url | json }}, w: 766, h: 506 },
