@@ -252,7 +252,7 @@
    "layers": [
     { "type": "bg", "id": "home" },
     { "type": "adult", "who": "caregiver", "pose": "stand", "at": [ 330, 700 ] },
-    { "type": "child", "pose": "holdHand", "at": [ 520, 700 ] }
+    { "type": "child", "pose": "stand", "at": [ 520, 700 ] }
    ],
    "text": {
     "std": "A grown-up I know will come with me.",
@@ -271,7 +271,7 @@
      }
     },
     { "type": "adult", "who": "caregiver", "pose": "stand", "at": [ 170, 740 ] },
-    { "type": "child", "pose": "point", "at": [ 310, 740 ] }
+    { "type": "child", "pose": "stand", "at": [ 310, 740 ] }
    ],
    "text": {
     "std": "We go to the dental office. It may be a building I have not seen before.",
@@ -665,7 +665,7 @@
     { "type": "bg", "id": "dentistRoom" },
     { "type": "prop", "id": "lamp", "at": [ 400, 170 ] },
     { "type": "prop", "id": "examChair", "at": [ 400, 700 ], "hideWhen": "wheelchair" },
-    { "type": "child", "pose": "sitPoint", "at": [ 400, 610 ], "wear": "bib", "wheelchairAt": [ 400, 700 ] },
+    { "type": "child", "pose": "sit", "at": [ 400, 610 ], "wear": "bib", "wheelchairAt": [ 400, 700 ] },
     { "type": "adult", "who": "dentist", "pose": "wave", "at": [ 740, 700 ], "flip": true, "gloves": true },
     {
      "type": "icons",

@@ -12,7 +12,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'c
 const content = loadContent(root);
 registerCatalog(content);
 const titles = ['dentist', 'haircut'];
-const maya = { name: 'Maya', pronouns: 'she', skin: 's4', hairStyle: 'curls', hairColor: 'darkbrown', eyes: 'brown', outfit: 'cardigan', supports: ['glasses'] };
+const maya = { name: 'Maya', pronouns: 'she', skin: 's4', hairStyle: 'curls', hairColor: 'black', eyes: 'brown', outfit: 'cardigan', supports: ['glasses'] };
 const everything = { name: 'Ren', pronouns: 'they', ageBand: '4-5', skin: 's2', hairStyle: 'wavy', hairColor: 'brown', eyes: 'green', outfit: 'flower', supports: ['aac', 'earDefenders', 'hearingAids', 'glasses'], mobility: 'wheelchair', comfort: 'bunny' };
 const sha = (s) => crypto.createHash('sha256').update(s).digest('hex');
 const design = (titleId, character, binding = 'softcover', extra = {}) => ({ titleId, character, textSetting: 'std', variantId: variantFor(titleId, binding).id, approved: true, ...extra });

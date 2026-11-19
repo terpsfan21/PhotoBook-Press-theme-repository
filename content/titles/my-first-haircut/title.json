@@ -241,7 +241,7 @@
    "layers": [
     { "type": "bg", "id": "home" },
     { "type": "adult", "who": "caregiver", "pose": "stand", "at": [ 330, 700 ] },
-    { "type": "child", "pose": "holdHand", "at": [ 520, 700 ] }
+    { "type": "child", "pose": "stand", "at": [ 520, 700 ] }
    ],
    "text": {
     "std": "A grown-up I know will come with me.",
@@ -260,7 +260,7 @@
      }
     },
     { "type": "adult", "who": "caregiver", "pose": "stand", "at": [ 170, 740 ] },
-    { "type": "child", "pose": "point", "at": [ 310, 740 ] }
+    { "type": "child", "pose": "stand", "at": [ 310, 740 ] }
    ],
    "text": {
     "std": "We go to the hair salon or barbershop.",

@@ -80,11 +80,10 @@ export const OPTIONS = {
   ],
   hairStyle: [
     { id: 'curls', label: 'Curls' }, { id: 'bob', label: 'Bob with fringe' }, { id: 'puffs', label: 'Two puffs' },
-    { id: 'wavy', label: 'Wavy, shoulder length' }, { id: 'braids', label: 'Two braids' }, { id: 'short', label: 'Short' }, { id: 'crop', label: 'Close crop' },
+    { id: 'wavy', label: 'Wavy, shoulder length' }, { id: 'short', label: 'Short' },
   ],
   hairColor: [
-    { id: 'black', label: 'Black' }, { id: 'darkbrown', label: 'Dark brown' }, { id: 'brown', label: 'Brown' },
-    { id: 'lightbrown', label: 'Light brown' }, { id: 'red', label: 'Red' }, { id: 'blonde', label: 'Blonde' },
+    { id: 'black', label: 'Black' }, { id: 'brown', label: 'Brown' }, { id: 'red', label: 'Red' }, { id: 'blonde', label: 'Blonde' },
   ],
   eyes: [
     { id: 'brown', label: 'Brown' }, { id: 'hazel', label: 'Hazel' }, { id: 'green', label: 'Green' }, { id: 'blue', label: 'Blue' }, { id: 'gray', label: 'Gray' },
@@ -107,7 +106,7 @@ export const OPTIONS = {
 
 export const DEFAULT_CHARACTER = {
   name: '', pronouns: 'none', ageBand: '',
-  skin: 's4', hairStyle: 'curls', hairColor: 'darkbrown', eyes: 'brown', outfit: 'cardigan',
+  skin: 's4', hairStyle: 'curls', hairColor: 'black', eyes: 'brown', outfit: 'cardigan',
   supports: [], mobility: 'none', comfort: 'none',
 };
 

@@ -3,7 +3,7 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadContent } from './content.js';
-import { POSES } from '../shared/character.js';
+import { POSES, WHEELCHAIR_POSE } from '../shared/character.js';
 import { OPTIONS, CONFIG } from '../shared/catalog.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'content');
@@ -38,11 +38,13 @@ for (const t of c.titles.filter((x) => x.status !== 'fixture')) {
 }
 
 // Character layers
-const poses = Object.keys(POSES);
+const used = new Set();
+for (const t of c.titles) for (const p of [...(t.pages || []), ...Object.values(t.cover || {})]) for (const l of p.layers || []) if (l.type === 'child') { used.add(l.pose); used.add(WHEELCHAIR_POSE[l.pose] || l.pose); }
+const poses = Object.keys(POSES).filter((p) => used.has(p));
 let charHave = 0;
 let charNeed = 0;
 for (const pose of poses) {
-  const parts = [...OPTIONS.skin.map((o) => `body-${o.id}`), ...OPTIONS.outfit.map((o) => `outfit-${o.id}`), ...OPTIONS.hairStyle.flatMap((s) => OPTIONS.hairColor.map((col) => `hair-${s.id}-${col.id}`)), ...OPTIONS.supports.map((o) => `acc-${o.id}`), 'comfort-bunny', 'comfort-bear'];
+  const parts = [...OPTIONS.skin.map((o) => `body-${o.id}`), ...OPTIONS.outfit.map((o) => `outfit-${o.id}`), ...OPTIONS.hairStyle.flatMap((s) => OPTIONS.hairColor.map((col) => `hair-${s.id}-${col.id}`)), ...OPTIONS.eyes.filter((o) => o.id !== 'brown').map((o) => `eyes-${o.id}`), ...OPTIONS.supports.map((o) => `acc-${o.id}`), 'comfort-bunny', 'comfort-bear'];
   for (const part of parts) { charNeed++; const name = `nub-char-v1-${pose}-${part}`; known.add(name); if (files[name]) charHave++; }
 }
 console.log(`Character layers: ${charHave}/${charNeed} required files across ${poses.length} poses (missing layers fall back to placeholder drawings)`);

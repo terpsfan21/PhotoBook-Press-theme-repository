@@ -69,28 +69,25 @@ File name: `nub-char-v1-<pose>-<part>.png`, in `content/characters/v1/`.
 | Outfit | `outfit-cardigan`, `outfit-collar`, `outfit-leaf`, `outfit-flower`, `outfit-pocket` | Yes |
 | Hair in front of the head | `hair-<style>-<color>` e.g. `hair-curls-black` | Yes |
 | Hair behind the head | `hairback-<style>-<color>` | Only if the style needs it |
-| Eye color | `eyes-brown`, `eyes-hazel`, `eyes-green`, `eyes-blue`, `eyes-gray` | Optional |
+| Eye color | `eyes-hazel`, `eyes-green`, `eyes-blue`, `eyes-gray` (brown is painted into the body) | Yes, if offered |
 | Supports | `acc-glasses`, `acc-hearingAids`, `acc-earDefenders`, `acc-aac` | Yes, if offered |
 | Comfort item | `comfort-bunny`, `comfort-bear` | Yes, if offered |
-| Wheelchair | `mobility-wheelchair` | Yes for seated poses, if offered |
+| Wheelchair | `mobility-wheelchair` (behind the child), optional `mobility-wheelchair-front` | Yes for seated poses, if offered |
 | Scene wear | `wear-bib`, `wear-cape` | Where a page uses it |
 
 Stacking order, back to front: wheelchair, hairback, body, outfit, eyes, hair, wear, supports, comfort item.
 
-Poses: `stand`, `wave`, `handUp`, `point`, `holdHand`, `sit`, `sitWave`, `sitHandUp`, `sitPoint`. A child using a wheelchair is always drawn with the seated version of a pose.
+Poses: `stand`, `wave`, `handUp`, `sit`, `sitWave`, `sitHandUp`. A child using a wheelchair is always drawn with the seated version of a pose.
 
-Hair styles: `curls`, `bob`, `puffs`, `wavy`, `braids`, `short`, `crop`. Hair colors: `black`, `darkbrown`, `brown`, `lightbrown`, `red`, `blonde`.
+Hair styles: `curls`, `bob`, `puffs`, `wavy`, `short`. Hair colors: `black`, `brown`, `red`, `blonde`.
 
 A pose switches from placeholder to finished art only when every layer the customer's choices need is present. Until then that pose stays a placeholder, so a half-delivered set never shows a mismatched child.
 
-### This is the biggest production risk
+### Launch set
 
-The current option list needs **59 layers per pose, 531 files across 9 poses.** Keeping a character consistent and pixel-aligned across that many generated images is hard. Two ways to cut it down before commissioning anything:
+The editor is trimmed to a launch set: **6 poses** (`stand`, `wave`, `handUp`, `sit`, `sitWave`, `sitHandUp`), 6 skin tones, 5 outfits, **5 hair styles** (`curls`, `bob`, `puffs`, `wavy`, `short`) in **4 colors** (`black`, `brown`, `red`, `blonde`), 4 eye-color overlays, 4 supports and 2 comfort toys. That is 41 layers per pose and 246 in all, plus bib and cape. Brown eyes are painted into the body layer; the other eye colors are small overlays (`eyes-hazel`, `eyes-green`, `eyes-blue`, `eyes-gray`) and are required when a customer picks them.
 
-- **Fewer poses.** Six poses (`stand`, `wave`, `handUp`, `sit`, `sitWave`, `sitHandUp`) cover both launch stories with small edits to page layouts. That is 354 files.
-- **Fewer hair combinations.** Hair is 42 of the 59 layers (7 styles × 6 colors). Five styles × four colors brings a pose down to 37 layers, and six poses to 222 files.
-
-Tell me which options you want at launch and I will trim the editor's list to match. Options can be added later without changing anything else.
+The first test set (one pose, 9 layers, 4 backgrounds) lined up correctly in the editor. The full list of what to make is in `ART_BRIEF_FULL.md`. Options can be added later without changing anything else.
 
 ## 4. Story file (`title.json`)
 

@@ -45,6 +45,7 @@ Screenshots of each step are in `docs/screenshots/`.
 |---|---|
 | `docs/SITE_AND_JOURNEY.md` | Site map, the customer journey stage by stage, what is real and what is faked, and the questions that need an owner or Linemark answer |
 | `docs/ASSET_SPEC.md` | File formats and naming for stories, page art, character layers, covers and videos, so new titles drop in without rebuilding the editor |
+| `docs/ART_BRIEF_FULL.md` | The full art list for the creative side: character layers, page backgrounds for both books, and website artwork |
 | `docs/LAUNCH_PLAN.md` | Parent-focused launch plan: channel comparison, outreach messages, budget, results to track |
 | `docs/BUSINESS_PLAN.md` | Pricing and margins for both bindings, launch titles, demand tests, video add-on test |
 | `docs/handoff/` | The original brief and artwork notes |

@@ -132,11 +132,12 @@ function paintedChild(c, layer) {
   opt(`hairback-${c.hairStyle}-${c.hairColor}`);
   req(`body-${c.skin}`);
   req(`outfit-${c.outfit}`);
-  opt(`eyes-${c.eyes}`);
+  if (c.eyes !== 'brown') req(`eyes-${c.eyes}`); // brown eyes are painted into the body layer
   req(`hair-${c.hairStyle}-${c.hairColor}`);
   if (layer.wear) req(`wear-${layer.wear}`);
   for (const sup of c.supports) req(`acc-${sup}`, sup);
   if (c.comfort !== 'none') req(`comfort-${c.comfort}`, 'comfort');
+  if (c.mobility === 'wheelchair') opt('mobility-wheelchair-front'); // parts of the chair in front of the child
   if (need.some(([a]) => !a)) return null;
   return need.map(([a, sup]) => `<image href="${esc(a.url)}" ${CHAR_BOX}${sup ? ` data-support="${sup}"` : ''}/>`).join('');
 }
