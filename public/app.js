@@ -1,9 +1,9 @@
 // Next Up Books — storefront prototype (vanilla JS, no build step).
 // Journey: choose a story → make the character → preview every page →
 // choose softcover or hardcover → cart → test checkout → order + proof.
-import { registerCatalog, TITLES, CONCEPTS, PARTNERS, ASSETS, OPTIONS, BINDINGS, CONFIG, DEFAULT_CHARACTER, NAME_MAX, variantFor, money } from '/shared/catalog.js';
-import { resolveBook, renderArt, pageHTML, fingerprintSource, normalizeCharacter, validateName, validateDesign, resolveText, fillTokens, esc } from '/shared/render.js';
-import { renderCharacter, SKIN, HAIR_COLOR, EYES, OUTFITS } from '/shared/character.js';
+import { registerCatalog, TITLES, CONCEPTS, PARTNERS, ASSETS, OPTIONS, BINDINGS, CONFIG, DEFAULT_CHARACTER, NAME_MAX, variantFor, money } from '../shared/catalog.js';
+import { resolveBook, renderArt, pageHTML, fingerprintSource, normalizeCharacter, validateName, validateDesign, resolveText, fillTokens, esc } from '../shared/render.js';
+import { renderCharacter, SKIN, HAIR_COLOR, EYES, OUTFITS } from '../shared/character.js';
 
 const main = document.getElementById('main');
 const live = document.getElementById('live');
@@ -27,8 +27,22 @@ async function api(path, opts = {}) {
   if (!res.ok) throw Object.assign(new Error(data.message || 'Something went wrong. Please try again.'), data);
   return data;
 }
+// Where designs, the cart and checkout live. The local dev server is the
+// default; the Shopify draft supplies its own (see shopify/src/backend.js).
+const backend = window.NUB_BACKEND || {
+  features: { ops: true, testCheckout: true, simulated: false },
+  catalog: () => api('/api/catalog'),
+  cart: () => api('/cart.js'),
+  async addBook(input, variantId) {
+    const d = await api('/api/designs', { method: 'POST', body: input });
+    // Only the opaque design ID travels with the cart line (private property).
+    await api('/cart/add.js', { method: 'POST', body: { items: [{ id: variantId, quantity: 1, properties: { [CONFIG.designProperty]: d.designId } }] } });
+  },
+  changeQty: (key, quantity) => api('/cart/change.js', { method: 'POST', body: { id: key, quantity } }),
+  setRef: (code) => api('/cart/update.js', { method: 'POST', body: { attributes: { [CONFIG.refAttribute]: code } } }),
+};
 async function refreshCart() {
-  const cart = await api('/cart.js');
+  const cart = await backend.cart();
   $('#cart-link').textContent = `Cart (${cart.item_count})`;
   return cart;
 }
@@ -215,9 +229,7 @@ function viewMake(titleId) {
         const variant = variantFor(t.id, state.binding);
         const book = resolveBook({ titleId: t.id, character: state.character, textSetting: state.textSetting });
         const previewHash = await sha256(fingerprintSource(book, variant.id));
-        const d = await api('/api/designs', { method: 'POST', body: { titleId: t.id, character: state.character, textSetting: state.textSetting, variantId: variant.id, approved: true, previewHash } });
-        // Only the opaque design ID travels with the cart line (private property).
-        await api('/cart/add.js', { method: 'POST', body: { items: [{ id: variant.id, quantity: 1, properties: { [CONFIG.designProperty]: d.designId } }] } });
+        await backend.addBook({ titleId: t.id, character: state.character, textSetting: state.textSetting, variantId: variant.id, approved: true, previewHash }, variant.id);
         location.hash = '#/cart';
       } catch (err) { out.textContent = err.message; e.target.disabled = false; }
     }
@@ -261,10 +273,11 @@ async function viewCart() {
     <td>${money(i.line_price)}</td><td><button class="btn small ghost" data-remove="${i.key}">Remove<span class="sr"> ${esc(i.title)}</span></button></td></tr>`).join('')}
   </tbody></table></div>
   <div class="totals"><div><span>Subtotal</span><span>${money(cart.total_price)}</span></div><div><span>Shipping (sample)</span><span>${money(CONFIG.sampleShippingCents)}</span></div><div class="grand"><span>Total</span><span>${money(cart.total_price + CONFIG.sampleShippingCents)}</span></div></div>
-  <div class="actions"><a class="btn ghost" href="#/">Add another book</a><a class="btn" href="#/checkout" ${bad ? 'aria-disabled="true" style="pointer-events:none;opacity:.55"' : ''}>Checkout (test)</a></div>
+  <div class="actions"><a class="btn ghost" href="#/">Add another book</a><a class="btn" href="${backend.features.testCheckout ? '#/checkout' : backend.checkoutUrl || '#/cart'}" ${bad || (!backend.features.testCheckout && !backend.checkoutUrl) ? 'aria-disabled="true" style="pointer-events:none;opacity:.55"' : ''}>${backend.features.testCheckout ? 'Checkout (test)' : 'Checkout'}</a></div>
+  ${backend.features.simulated ? '<p class="note"><strong>Draft:</strong> the Next Up Books products are not active in this store yet, so this cart is a stand-in kept in your browser and checkout is switched off. Once test products are active, this becomes the store\u2019s real cart.</p>' : ''}
   <p class="note">The book design travels with each cart line as a hidden reference code only. Names and choices are never placed in the cart, the order, or analytics.</p>`;
-  main.onclick = async (e) => { const k = e.target.closest('[data-remove]')?.dataset.remove; if (k) { await api('/cart/change.js', { method: 'POST', body: { id: k, quantity: 0 } }); say('Book removed'); viewCart(); } };
-  main.onchange = async (e) => { const k = e.target.dataset.qty; if (k) { await api('/cart/change.js', { method: 'POST', body: { id: k, quantity: Number(e.target.value) } }); viewCart(); } };
+  main.onclick = async (e) => { const k = e.target.closest('[data-remove]')?.dataset.remove; if (k) { await backend.changeQty(k, 0); say('Book removed'); viewCart(); } };
+  main.onchange = async (e) => { const k = e.target.dataset.qty; if (k) { await backend.changeQty(k, Number(e.target.value)); viewCart(); } };
   main.oninput = main.onkeydown = null;
 }
 
@@ -366,19 +379,19 @@ async function route() {
   main.onclick = main.onchange = main.oninput = main.onkeydown = null;
   if (name === 'make') viewMake(arg);
   else if (name === 'cart') await viewCart();
-  else if (name === 'checkout') await viewCheckout();
-  else if (name === 'order') await viewOrder();
-  else if (name === 'ops') await viewOps();
+  else if (name === 'checkout' && backend.features.testCheckout) await viewCheckout();
+  else if (name === 'order' && backend.features.testCheckout) await viewOrder();
+  else if (name === 'ops' && backend.features.ops) await viewOps();
   else if (name === 'content') viewContent();
   else viewHome();
   if (name !== 'make') window.scrollTo(0, 0);
 }
 
-const data = await api('/api/catalog');
+const data = await backend.catalog();
 registerCatalog(data);
 state.problems = data.problems || [];
 const ref = new URLSearchParams(location.search).get('ref');
-if (ref && PARTNERS[ref]) { save('nub.ref', ref); await api('/cart/update.js', { method: 'POST', body: { attributes: { [CONFIG.refAttribute]: ref } } }); }
+if (ref && PARTNERS[ref]) { save('nub.ref', ref); await backend.setRef(ref); }
 window.addEventListener('hashchange', () => { if (!location.hash.startsWith('#/make')) state.step = 'character'; route(); });
 await refreshCart();
 route();

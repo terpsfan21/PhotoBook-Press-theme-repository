@@ -23,7 +23,7 @@ header nav { display: flex; flex-wrap: wrap; gap: 4px 14px; }
 header nav a { padding: 8px 4px; font-weight: 700; text-decoration: none; }
 header nav a:hover { text-decoration: underline; }
 .dev-link { color: var(--muted); font-weight: 600; }
-main { max-width: 1120px; margin: 0 auto; padding: 20px 16px 60px; }
+#main { max-width: 1120px; margin: 0 auto; padding: 20px 16px 60px; }
 footer.site { border-top: 2px solid var(--line); padding: 18px 16px 30px; font-size: .88rem; color: var(--muted); text-align: center; }
 
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 10px 20px; border-radius: 999px; border: 2px solid var(--teal); background: var(--teal); color: #fff; font: inherit; font-weight: 800; cursor: pointer; text-decoration: none; }
